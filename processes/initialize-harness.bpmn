@@ -96,7 +96,7 @@ WRITING IT IS NOT A PROCESS WRITE. `instance-readme` declares `layer: context`, 
     </bpmn:task>
 
     <bpmn:callActivity id="A_CompleteInitialization" name="Make sure every step is done" calledElement="Process_CompleteInitialization">
-      <bpmn:documentation>Following a harness's instructions once is not the same as every step being done. `complete-initialization` walks the steps the declarations name — declared directories, assets, the README and its sections, the site — checks each, does what can be done, asks the person for what only they can do, and reports every step in its state. An agent may be dispatched to run it on its own: it needs nothing but that diagram and the declarations.</bpmn:documentation>
+      <bpmn:documentation>Following a harness's instructions once is not the same as every step being done. `complete-initialization` walks the steps the declarations name — FIRST the harness's JSON Schemas and JSON-LD at the IRIs they name, the primary step of initializing a Knowledge Graph harness; then declared directories, assets, the README and its sections, and the site that carries the documents — checks each, does what can be done, asks the person for what only they can do, and reports every step in its state. An agent may be dispatched to run it on its own: it needs nothing but that diagram and the declarations.</bpmn:documentation>
       <bpmn:extensionElements><bootstrap.processes:skill ref="initialization-steps"/></bpmn:extensionElements>
     </bpmn:callActivity>
 

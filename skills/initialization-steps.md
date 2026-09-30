@@ -27,6 +27,8 @@ declaration that names it, so a reader can see why it is there.
 | `declaration` | the file itself | `<name>.json` parses and its `name` is its file name |
 | `needs:<name>` | `needs` | the dependency is beside it, and its declaration parses |
 | `instructions:<name>` | FR-4 | *stated*: `<name>/docs/bootstrap/initialization.md` was read and followed |
+| **`schemas:staged`** | each `$id` / `@id` under `iriBase` (FR-11) | the site build stages every JSON Schema and JSON-LD document at its IRI |
+| **`schemas:published`** | the same IRIs (FR-11) | every one of those IRIs answers |
 | `directory:<id>` | `directories[]` | the declared path exists |
 | `asset:<id>` | `assets[]` | the declared file exists |
 | `readme` | FR-8 | the root has a `README.md` |
@@ -34,6 +36,13 @@ declaration that names it, so a reader can see why it is there.
 | `site:workflow` | `repository` | a workflow deploys the site to GitHub Pages |
 | `site:enabled` | `repository` | Pages is on, built by that workflow |
 | `site:live` | `iriBase`, else the Pages address | the address answers |
+
+**The two `schemas:` steps are the primary ones** (owner, 2026-09-30:
+*"json(ld) is primary step in initializing KG harness"*). They are checked
+first once the declarations are read, and the report leads with them:
+[`publish-documents`](publish-documents.md). Everything after them is either
+how those documents are reached (the site) or how a person reads about them
+(the README).
 
 A harness above bootstrap names more steps **the same way**. A work-plan
 store it declares as a directory is a `directory:` step, and a harness's own
@@ -89,7 +98,8 @@ the same either way, and so is the report.
 
 ## The report
 
-One report through [`log-message`](log-message.md): every step, the
+One report through [`log-message`](log-message.md), **led by the primary
+step's state** (the JSON Schemas and JSON-LD at their IRIs): then every step, the
 declaration that named it, its state, what was seen, and for anything not
 done, what to do and who does it. End with the counts (done, not done, could
 not determine, stated). An initialization that finished with steps open says

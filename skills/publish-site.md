@@ -10,6 +10,11 @@ description: >
 
 # The site: a workflow, Pages on, the address answering
 
+**The site is the vehicle, not the goal.** The goal is the harness's JSON
+Schemas and JSON-LD answering at the IRIs they name
+([`publish-documents`](publish-documents.md), the primary step); the site is
+how they get there, and a README page for people rides along.
+
 A declaration that names a `repository` on GitHub has a site address:
 its `iriBase` when it declares one, otherwise
 `https://<owner>.github.io/<repo>/`. **An address a declaration names and
@@ -33,6 +38,9 @@ What the staged site holds:
   first, then each directory's README in path order, with a table of
   contents, each README's headings demoted under its own section, and every
   relative link rewritten so it still lands;
+- **every JSON Schema and JSON-LD document at the IRI it names**, with a
+  `.json` copy beside each `.jsonld`, listed under "Published documents" on
+  the index page ([`publish-documents`](publish-documents.md));
 - every file of the instance, as it sits, so every link into it resolves;
 - for bootstrap, its own Knowledge Graph at the address its `@id` names
   ([`bootstrap-graph-publication`](bootstrap-graph-publication.md)).
@@ -66,8 +74,9 @@ Never silent: a step that could not be checked is said to be unchecked.
 
 Fetch the address. 200 is done. 404 after Pages is on usually means the
 workflow has not run since; the run is at
-`https://github.com/<owner>/<repo>/actions`. Unreachable from here is
-*could not determine*, never done.
+`https://github.com/<owner>/<repo>/actions`. A 403, 407 or 5xx, or no answer
+at all, is about the way from here (a proxy, an access rule), not about the
+site: *could not determine*, never done and never not done.
 
 ## Cost
 

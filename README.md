@@ -116,6 +116,7 @@ Requirement it must meet (see the next section).
  6  Leave a README at the repository's root, if it has none
  |
  7  Make sure every step the declarations name is done  --- only a person can? ---> ask
+      first: the JSON Schemas and JSON-LD at the IRIs they name
  |
     Harness installed, every step reported: done, not done, could not determine, or stated
 
@@ -179,9 +180,12 @@ The same steps, and the [Processes](schemas/README.md#process) they start, as th
 6. **Leave a README at the repository's root, if it has none** (FR-8). Read
    [`skills/root-readme.md`](skills/root-readme.md).
 7. **Make sure every step is done** (FR-10). The steps are the ones the
-   declarations name: the declared directories and files, the README and the
-   sections it opts into, each needed Harness's own instructions, and the
-   site on GitHub Pages. Check each one before doing anything, do what you
+   declarations name. **First, and primary: the Harness's JSON Schemas and
+   JSON-LD documents are published at the IRIs they name** (FR-11; read
+   [`skills/publish-documents.md`](skills/publish-documents.md)). Then the
+   declared directories and files, the README and the sections it opts
+   into, each needed Harness's own instructions, and the site on GitHub
+   Pages, which is how the documents get to their addresses. Check each one before doing anything, do what you
    can, and ask the person for what only they can do. Read
    [`skills/initialization-steps.md`](skills/initialization-steps.md) and,
    for the site, [`skills/publish-site.md`](skills/publish-site.md). Where
@@ -209,6 +213,7 @@ a step can name it: Functional Requirement 1 is FR-1.
 | **FR-8** | When the set-up succeeds, the repository's root has a `README.md` naming the Harness and whether the set-up succeeded everywhere. An existing README is added to, never replaced. |
 | **FR-9** | Whenever a step needs a person to decide or to act, it calls `human-agent-discussion`: context, options, a recommendation and what happens with no answer, then one question. A default applies only where the calling step allows one. |
 | **FR-10** | Every initialization step the declarations name is checked before anything is done, and reported as done, not done, could not determine, or stated. "Could not determine" is never reported as done, and nothing somebody wrote is replaced. |
+| **FR-11** | A Knowledge Graph Harness's JSON Schemas and JSON-LD documents (its vocabulary, its diagram vocabulary, its graph, each with its `@context`) are published at the IRIs they name. It is the primary initialization step: checked first after the declarations are read, and first in the report. A site is how they get there, not the goal. |
 
 ---
 
@@ -256,6 +261,7 @@ Process that reads a file, where a diagram says so.
 | [`initialization-steps.md`](skills/initialization-steps.md) | Walk every initialization step the declarations name (the instance's own and each one it needs), check each before doing anything, do what can be done, ask f… | "Complete initialization", "Initialize a harness" |
 | [`log-message.md`](skills/log-message.md) | Say what you are doing, to the Logger, in a form a reader can act on. | "Complete initialization", "Initialize a harness", "Log a message" |
 | [`package-manifest.json`](skills/package-manifest.json) | What an agent reads before it knows whether this repository is an instance, what kind, or what for. |  |
+| [`publish-documents.md`](skills/publish-documents.md) | The primary step of initializing a Knowledge Graph harness: every JSON Schema and JSON-LD document it names an address for (schemas, vocabulary, diagram voca… | "Complete initialization" |
 | [`publish-site.md`](skills/publish-site.md) | Give an instance a site on GitHub Pages: a workflow that builds its READMEs into one page with a table of contents and deploys it, Pages switched on and buil… | "Complete initialization" |
 | [`root-readme.md`](skills/root-readme.md) | Write the repository's root README when there is none, carrying a link to the harness that was installed and the overall install status. | "Initialize a harness" |
 
