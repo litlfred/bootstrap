@@ -75,7 +75,6 @@
     {
       "id": "skills",
       "path": "skills/",
-      "dependents": "skip",
       "graphKinds": [
         "skills"
       ]
@@ -83,7 +82,6 @@
     {
       "id": "schemas",
       "path": "schemas/",
-      "dependents": "skip",
       "description": "The schemas bootstrap is checked against: `graph.schema.json`, the shape of a declaration and the definition of every term bootstrap uses; and the input and output of the discussion Process. Their published `$id`s do not change when a file moves.",
       "graphKinds": [
         "schemas"
@@ -92,7 +90,6 @@
     {
       "id": "scenarios",
       "path": "scenarios/",
-      "dependents": "reproduce",
       "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
       "graphKinds": [
         "scenarios"
@@ -101,7 +98,6 @@
     {
       "id": "processes",
       "path": "processes/",
-      "dependents": "skip",
       "description": "bootstrap's Processes: `initialize-harness.bpmn`, the only one an Actor starts; `discussion.bpmn`, which it calls to ask the Requestor; and `log-message.bpmn`, which any step may call to record what it is doing. `ns.jsonld` defines the elements these diagrams add to BPMN (skill, role, precondition), written with the prefix `bootstrap.processes:`.",
       "graphKinds": [
         "processes"
@@ -110,7 +106,6 @@
     {
       "id": "models",
       "path": "models/",
-      "dependents": "skip",
       "description": "Which languages a model is good at, and whether anybody checked. In BOOTSTRAP for the reason everything else here is: an agent reaching for the language it should communicate in has not yet loaded the harness that would otherwise answer, so a registry one layer up would be unreachable in exactly the case it exists for. `context`: read when a session opens, never written by a process — a person grants a validation, an agent never does, because a model's own claim about its languages is the thing the validation state exists to distrust.",
       "graphKinds": [
         "models"
