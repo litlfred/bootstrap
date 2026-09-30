@@ -8,7 +8,10 @@
     "bootstrap-kg-navigation",
     "confirm-harness",
     "discussion",
+    "human-agent-discussion",
+    "initialization-steps",
     "log-message",
+    "publish-site",
     "root-readme"
   ],
   "docker": {

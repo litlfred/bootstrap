@@ -9,10 +9,13 @@ Part of [Bootstrap](../README.md) 0.1.0, declared as `skills`, holding `skills`.
 |---|---|---|
 | [`bootstrap-graph-emission.md`](bootstrap-graph-emission.md) | What bootstrap's own [Knowledge Graph](../schemas/README.md#knowledge-graph) must be when it is written out as a data file, `.jsonld` with a `.json` copy. |  |
 | [`bootstrap-graph-publication.md`](bootstrap-graph-publication.md) | Where bootstrap's [Knowledge Graph](../schemas/README.md#knowledge-graph) file is published, why its `@id` must be exactly that address, why a `.json` copy sits beside the `.jsonld`, and why the fi… |  |
-| [`bootstrap-kg-navigation.md`](bootstrap-kg-navigation.md) | Read and navigate a knowledge graph with nothing installed — no MCP server, no tools, no harness. | "Initialize a harness" |
-| [`confirm-harness.md`](confirm-harness.md) | Narrow the harnesses and locations this could be, then have the Requestor settle it. | "Initialize a harness" |
+| [`bootstrap-kg-navigation.md`](bootstrap-kg-navigation.md) | Read and navigate a knowledge graph with nothing installed — no MCP server, no tools, no harness. | "Complete initialization", "Initialize a harness" |
+| [`confirm-harness.md`](confirm-harness.md) | Narrow the harnesses and locations this could be, then have the Requestor settle it. | "Determine the harness and repositories", "Initialize a harness" |
 | [`discussion.md`](discussion.md) | discussion — settling what an agent cannot read off disk |  |
-| [`log-message.md`](log-message.md) | Say what you are doing, to the Logger, in a form a reader can act on. | "Initialize a harness", "Log a message" |
+| [`human-agent-discussion.md`](human-agent-discussion.md) | Ask a person (or a sibling agent) for what no file holds: context, then the options, then a recommendation and what happens with no answer, then ONE question. | "Complete initialization", "Determine the harness and repositories", "Human–agent discussion" |
+| [`initialization-steps.md`](initialization-steps.md) | Walk every initialization step the declarations name (the instance's own and each one it needs), check each before doing anything, do what can be done, ask f… | "Complete initialization", "Initialize a harness" |
+| [`log-message.md`](log-message.md) | Say what you are doing, to the Logger, in a form a reader can act on. | "Complete initialization", "Initialize a harness", "Log a message" |
 | [`package-manifest.json`](package-manifest.json) | What an agent reads before it knows whether this repository is an instance, what kind, or what for. |  |
+| [`publish-site.md`](publish-site.md) | Give an instance a site on GitHub Pages: a workflow that builds its READMEs into one page with a table of contents and deploys it, Pages switched on and buil… | "Complete initialization" |
 | [`root-readme.md`](root-readme.md) | Write the repository's root README when there is none, carrying a link to the harness that was installed and the overall install status. | "Initialize a harness" |
 <!-- kg:subgraph:end -->

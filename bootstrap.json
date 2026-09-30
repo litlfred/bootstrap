@@ -1,5 +1,5 @@
 {
-  "_comment": "The bootstrap instance. It declares its directories under `directories` below, because discovery reads declarations rather than walking the tree, and an undeclared directory is not this instance's graph however many files sit in it. THREE processes live in `processes/` and exactly one of them is an ENTRY POINT: `processes/initialize-harness.bpmn`. A Bootstrapping Agent that has read README.md is at its start event with nowhere else to begin. `processes/log-message.bpmn` is an independent SUB-PROCESS, reached only by a callActivity from a step and never started. `processes/discussion.bpmn` is entered from within the entry process when a fact is needed that no file holds. Neither competes with the first for being the thing you begin. The constraint was never 'one file'; it is that there is one place to start. Every harness is composed ON TOP of this rather than being its parent, which is why nothing here may refer to one.",
+  "_comment": "The bootstrap instance. It declares its directories under `directories` below, because discovery reads declarations rather than walking the tree, and an undeclared directory is not this instance's graph however many files sit in it. FIVE processes live in `processes/` and exactly one of them is an ENTRY POINT: `processes/initialize-harness.bpmn`. A Bootstrapping Agent that has read README.md is at its start event with nowhere else to begin. The other four are SUB-PROCESSES, each reached only by a call activity: `discussion.bpmn` determines which harness and where; `human-agent-discussion.bpmn` is the one reusable way any diagram asks a person anything; `complete-initialization.bpmn` makes sure every step the declarations name is done; `log-message.bpmn` records what a step is doing. The constraint was never 'one file'; it is that there is one place to start. Every harness is composed ON TOP of this rather than being its parent, which is why nothing here may refer to one.",
   "name": "bootstrap",
   "repository": "litlfred/bootstrap",
   "version": "0.1.0",
@@ -98,7 +98,7 @@
     {
       "id": "processes",
       "path": "processes/",
-      "description": "bootstrap's Processes: `initialize-harness.bpmn`, the only one an Actor starts; `discussion.bpmn`, which it calls to ask the Requestor; and `log-message.bpmn`, which any step may call to record what it is doing. `ns.jsonld` defines the elements these diagrams add to BPMN (skill, role, precondition), written with the prefix `bootstrap.processes:`.",
+      "description": "bootstrap's Processes: `initialize-harness.bpmn`, the only one an Actor starts; `discussion.bpmn`, which it calls to determine the harness and repositories; `human-agent-discussion.bpmn`, the reusable discussion every diagram calls to ask a person anything; `complete-initialization.bpmn`, which checks every initialization step the declarations name; and `log-message.bpmn`, which any step may call to record what it is doing. `ns.jsonld` defines the elements these diagrams add to BPMN (skill, role, precondition), written with the prefix `bootstrap.processes:`.",
       "graphKinds": [
         "processes"
       ]
