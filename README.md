@@ -262,7 +262,7 @@ Process that reads a file, where a diagram says so.
 | [`log-message.md`](skills/log-message.md) | Say what you are doing, to the Logger, in a form a reader can act on. | "Complete initialization", "Initialize a harness", "Log a message" |
 | [`package-manifest.json`](skills/package-manifest.json) | What an agent reads before it knows whether this repository is an instance, what kind, or what for. |  |
 | [`publish-documents.md`](skills/publish-documents.md) | The primary step of initializing a Knowledge Graph harness: every JSON Schema and JSON-LD document it names an address for (schemas, vocabulary, diagram voca… | "Complete initialization" |
-| [`publish-site.md`](skills/publish-site.md) | Give an instance a site on GitHub Pages: a workflow that builds its READMEs into one page with a table of contents and deploys it, Pages switched on and buil… | "Complete initialization" |
+| [`publish-site.md`](skills/publish-site.md) | Give an instance a site: its Knowledge Graph rendered for publication at its site address, and the address answering. | "Complete initialization" |
 | [`root-readme.md`](skills/root-readme.md) | Write the repository's root README when there is none, carrying a link to the harness that was installed and the overall install status. | "Initialize a harness" |
 
 **[`schemas/`](schemas/README.md)**: The schemas bootstrap is checked against: `graph.schema.json`, the shape of a declaration and the definition of every term bootstrap uses; and the input and…

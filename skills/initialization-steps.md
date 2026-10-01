@@ -33,8 +33,9 @@ declaration that names it, so a reader can see why it is there.
 | `asset:<id>` | `assets[]` | the declared file exists |
 | `readme` | FR-8 | the root has a `README.md` |
 | `readme-sections` | the README's own markers | every section the README opts into is current |
-| `site:workflow` | `repository` | a workflow deploys the site to GitHub Pages |
-| `site:enabled` | `repository` | Pages is on, built by that workflow |
+| `site:workflow` | `repository` | a workflow commits the rendered site onto `gh-pages` |
+| `site:branch` | `repository` | a `gh-pages` branch exists — it must, before Pages can be switched on (2026-10-01) |
+| `site:enabled` | `repository` | Pages is on, serving `gh-pages` |
 | `site:live` | `iriBase`, else the Pages address | the address answers |
 
 **The two `schemas:` steps are the primary ones** (owner, 2026-09-30:
