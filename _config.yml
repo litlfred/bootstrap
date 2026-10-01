@@ -1,3 +1,143 @@
 title: "Bootstrap"
 description: "The graph an agent reads before it knows what this repository is."
 theme: jekyll-theme-primer
+generated_by_tools: "https://github.com/litlfred/bootstrap-tools"
+# What each page's footer links to (scripts/site.ts, templates/site/default.html).
+defaults:
+  - scope: { path: "AGENTS.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/AGENTS.md"
+  - scope: { path: "0.1.0/AGENTS.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/AGENTS.md"
+  - scope: { path: "LICENSE-CONTENT.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/LICENSE-CONTENT.md"
+  - scope: { path: "0.1.0/LICENSE-CONTENT.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/LICENSE-CONTENT.md"
+  - scope: { path: "models/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `models` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/models"
+  - scope: { path: "0.1.0/models/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `models` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/models"
+  - scope: { path: "processes/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `processes` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/processes"
+  - scope: { path: "0.1.0/processes/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `processes` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/processes"
+  - scope: { path: "scenarios/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `scenarios` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/scenarios"
+  - scope: { path: "0.1.0/scenarios/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `scenarios` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/scenarios"
+  - scope: { path: "schemas/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts","scripts/gen-bootstrap-schemas.ts"]
+      generated_from: "the `schemas` entry of `bootstrap.json` and the files in this directory; the schemas in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/schemas"
+  - scope: { path: "0.1.0/schemas/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts","scripts/gen-bootstrap-schemas.ts"]
+      generated_from: "the `schemas` entry of `bootstrap.json` and the files in this directory; the schemas in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/schemas"
+  - scope: { path: "skills/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `skills` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/skills"
+  - scope: { path: "0.1.0/skills/README.md" }
+    values:
+      generated_by: ["scripts/subgraph-readmes.ts"]
+      generated_from: "the `skills` entry of `bootstrap.json` and the files in this directory"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main/skills"
+  - scope: { path: "skills/bootstrap-graph-emission.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/bootstrap-graph-emission.md"
+  - scope: { path: "0.1.0/skills/bootstrap-graph-emission.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/bootstrap-graph-emission.md"
+  - scope: { path: "skills/bootstrap-graph-publication.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/bootstrap-graph-publication.md"
+  - scope: { path: "0.1.0/skills/bootstrap-graph-publication.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/bootstrap-graph-publication.md"
+  - scope: { path: "skills/bootstrap-kg-navigation.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/bootstrap-kg-navigation.md"
+  - scope: { path: "0.1.0/skills/bootstrap-kg-navigation.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/bootstrap-kg-navigation.md"
+  - scope: { path: "skills/confirm-harness.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/confirm-harness.md"
+  - scope: { path: "0.1.0/skills/confirm-harness.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/confirm-harness.md"
+  - scope: { path: "skills/discussion.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/discussion.md"
+  - scope: { path: "0.1.0/skills/discussion.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/discussion.md"
+  - scope: { path: "skills/human-agent-discussion.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/human-agent-discussion.md"
+  - scope: { path: "0.1.0/skills/human-agent-discussion.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/human-agent-discussion.md"
+  - scope: { path: "skills/initialization-steps.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/initialization-steps.md"
+  - scope: { path: "0.1.0/skills/initialization-steps.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/initialization-steps.md"
+  - scope: { path: "skills/log-message.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/log-message.md"
+  - scope: { path: "0.1.0/skills/log-message.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/log-message.md"
+  - scope: { path: "skills/publish-documents.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/publish-documents.md"
+  - scope: { path: "0.1.0/skills/publish-documents.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/publish-documents.md"
+  - scope: { path: "skills/publish-site.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/publish-site.md"
+  - scope: { path: "0.1.0/skills/publish-site.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/publish-site.md"
+  - scope: { path: "skills/root-readme.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/root-readme.md"
+  - scope: { path: "0.1.0/skills/root-readme.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/root-readme.md"
+  - scope: { path: "README.md" }
+    values:
+      generated_by: ["scripts/readme-book.ts"]
+      generated_from: "every README in this repository"
+      source_url: "https://github.com/litlfred/bootstrap/tree/main"
+  - scope: { path: "0.1.0/README.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/README.md"
+      generated_sections: ["scripts/readme-sections.ts"]
