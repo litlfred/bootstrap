@@ -33,7 +33,7 @@
       "src": "ns.jsonld",
       "role": "vocabulary",
       "title": "bootstrap vocabulary",
-      "description": "Every term bootstrap defines, in order, and every Graph Kind it defines, as RDF and SKOS — the document bootstrap's namespace resolves to. Generated from bootstrap's own terms by its toolset; each term links to the schema that defines it."
+      "description": "Every term bootstrap defines, in order, and every Graph Typology it defines, as RDF and SKOS — the document bootstrap's namespace resolves to. Generated from bootstrap's own terms by its toolset; each term links to the schema that defines it."
     }
   ],
   "_directories_comment": "Every entry is a subdirectory rather than `bootstrap/` itself. `isSkillMd` is declaration-over-location: a markdown file that does NOT declare `$schema:` is a skill. README.md and AGENTS.md declare neither, so a graph rooted at `bootstrap/` would count this instance's two DECLARED ASSETS as skill nodes — the instance has already said what those files are, and a scan would contradict its own declaration. Keeping the graph one level down means the two mechanisms cannot collide. Declared explicitly rather than relying on DEFAULT_DIRECTORIES: a declaration that exists is honoured as written, so defaults do not apply to an instance that declares anything at all.",
@@ -75,7 +75,7 @@
     {
       "id": "skills",
       "path": "skills/",
-      "graphKinds": [
+      "graphTypologies": [
         "skills"
       ]
     },
@@ -83,7 +83,7 @@
       "id": "schemas",
       "path": "schemas/",
       "description": "The schemas bootstrap is checked against: `graph.schema.json`, the shape of a declaration and the definition of every term bootstrap uses; and the input and output of the discussion Process. Their published `$id`s do not change when a file moves.",
-      "graphKinds": [
+      "graphTypologies": [
         "schemas"
       ]
     },
@@ -91,7 +91,7 @@
       "id": "scenarios",
       "path": "scenarios/",
       "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
-      "graphKinds": [
+      "graphTypologies": [
         "scenarios"
       ]
     },
@@ -99,7 +99,7 @@
       "id": "processes",
       "path": "processes/",
       "description": "bootstrap's Processes: `initialize-harness.bpmn`, the only one an Actor starts; `discussion.bpmn`, which it calls to determine the harness and repositories; `human-agent-discussion.bpmn`, the reusable discussion every diagram calls to ask a person anything; `complete-initialization.bpmn`, which checks every initialization step the declarations name; and `log-message.bpmn`, which any step may call to record what it is doing. `ns.jsonld` defines the elements these diagrams add to BPMN (skill, role, precondition), written with the prefix `bootstrap.processes:`.",
-      "graphKinds": [
+      "graphTypologies": [
         "processes"
       ]
     },
@@ -107,7 +107,7 @@
       "id": "models",
       "path": "models/",
       "description": "Which languages a model is good at, and whether anybody checked. In BOOTSTRAP for the reason everything else here is: an agent reaching for the language it should communicate in has not yet loaded the harness that would otherwise answer, so a registry one layer up would be unreachable in exactly the case it exists for. `context`: read when a session opens, never written by a process — a person grants a validation, an agent never does, because a model's own claim about its languages is the thing the validation state exists to distrust.",
-      "graphKinds": [
+      "graphTypologies": [
         "models"
       ]
     }
