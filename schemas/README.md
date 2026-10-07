@@ -14,6 +14,7 @@ Part of [Bootstrap](../README.md) 0.1.0, declared as `schemas`, holding `schemas
 | [`discussion.output.schema.json`](discussion.output.schema.json) | Discussion Output |  |
 | [`graph.schema.json`](graph.schema.json) | [Knowledge Graph](README.md#knowledge-graph) declaration |  |
 | [`model-registry.schema.json`](model-registry.schema.json) | Model Registry |  |
+| [`requirement-set.schema.json`](requirement-set.schema.json) | Requirement Set |  |
 | [`requirement.schema.json`](requirement.schema.json) | Requirement |  |
 <!-- kg:subgraph:end -->
 
