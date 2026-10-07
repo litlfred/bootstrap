@@ -221,7 +221,7 @@ Which languages a model is good at, and whether a person checked. Only `human-va
 
 [src](requirement.schema.json)
 
-What a harness, or something built with one, must do, said so it can be checked: a titled set of numbered statements, each with a level (SHALL, SHOULD, MAY, SHALL NOT) and one sentence. A test run points at a statement as `req:<slug>#<key>`; the requirement does not list its tests. Statement keys are unique within a requirement.
+What a harness, or something built with one, must do, said so it can be checked: a titled set of numbered statements, each with a level (SHALL, SHOULD, MAY, SHALL NOT), one sentence, and — optional for now, required once existing statements are migrated — at least one success criterion saying how it is judged met (test, inspection, review or analysis). A test run points at a statement as `req:<slug>#<key>`, or at one criterion as `req:<slug>#<key>/<criterion>`; the requirement does not list its tests. Statement keys are unique within a requirement, criterion keys within a statement.
 
 ```text
 +----------------------------------------------------------------------------+
@@ -239,21 +239,30 @@ What a harness, or something built with one, must do, said so it can be checked:
 |   supersededBy  [0..1]  string                                             |
 +----------------------------------------------------------------------------+
   |
-  +-- statements (each item) --> +-----------------------------------------------------------------+
-                                 | Statement                                                       |
-                                 +-----------------------------------------------------------------+
-                                 | * key          [1]     string                                   |
-                                 | * label        [1]     string                                   |
-                                 | * conformance  [1]     "SHALL" | "SHOULD" | "MAY" | "SHALL NOT" |
-                                 | * requirement  [1]     string                                   |
-                                 |   kind         [0..1]  "functional" | "non-functional"          |
-                                 |   activity     [0..1]  string                                   |
-                                 |   capability   [0..1]  string                                   |
-                                 |   benefit      [0..1]  string                                   |
-                                 |   category     [0..1]  string                                   |
-                                 |   actors       [0..*]  list of string                           |
-                                 |   dependsOn    [0..*]  list of string                           |
-                                 +-----------------------------------------------------------------+
+  +-- statements (each item) --> +---------------------------------------------------------------------+
+                                 | Statement                                                           |
+                                 +---------------------------------------------------------------------+
+                                 | * key              [1]     string                                   |
+                                 | * label            [1]     string                                   |
+                                 | * conformance      [1]     "SHALL" | "SHOULD" | "MAY" | "SHALL NOT" |
+                                 | * requirement      [1]     string                                   |
+                                 |   kind             [0..1]  "functional" | "non-functional"          |
+                                 |   activity         [0..1]  string                                   |
+                                 |   capability       [0..1]  string                                   |
+                                 |   benefit          [0..1]  string                                   |
+                                 |   category         [0..1]  string                                   |
+                                 |   actors           [0..*]  list of string                           |
+                                 |   dependsOn        [0..*]  list of string                           |
+                                 |   successCriteria  [0..*]  Success Criteria list                    |
+                                 +---------------------------------------------------------------------+
+                                   |
+                                   +-- successCriteria (each item) --> +--------------------------------------------------------------------+
+                                                                       | Success Criteria                                                   |
+                                                                       +--------------------------------------------------------------------+
+                                                                       | * key           [1]  string                                        |
+                                                                       | * criterion     [1]  string                                        |
+                                                                       | * verification  [1]  "test" | "inspection" | "review" | "analysis" |
+                                                                       +--------------------------------------------------------------------+
 ```
 
 Rules the drawing cannot show:
