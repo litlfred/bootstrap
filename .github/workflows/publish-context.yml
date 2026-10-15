@@ -1,6 +1,6 @@
 # Publish this layer's JSON-LD context to gh-pages, at
 # <iriBase>ns/context/v1.jsonld, on every push to main (bean
-# folio-assistant-63q4, owner 2026-10-15). Everything is decided in the
+# 63q4, owner 2026-10-15). Everything is decided in the
 # reusable workflow: it builds only this instance's context, writes that one
 # path to gh-pages (nothing else there is touched), creates gh-pages if absent,
 # and skips with a notice while the instance declares no iriBase.
