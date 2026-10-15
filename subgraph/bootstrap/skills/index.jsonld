@@ -1,0 +1,83 @@
+{
+  "@context": "https://litlfred.github.io/bootstrap/subgraph/v0/context.jsonld",
+  "@id": "https://litlfred.github.io/bootstrap/subgraph/bootstrap/skills/",
+  "@type": "bootstrap:Subgraph",
+  "hasMember": [
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "@type": "bootstrap:Subgraph",
+      "name": "skills"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-graph-emission",
+      "@type": "bootstrap:Skill",
+      "name": "bootstrap-graph-emission",
+      "title": "Writing out bootstrap's own Knowledge Graph"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-graph-publication",
+      "@type": "bootstrap:Skill",
+      "name": "bootstrap-graph-publication",
+      "title": "Publishing bootstrap's Knowledge Graph"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation",
+      "@type": "bootstrap:Skill",
+      "name": "bootstrap-kg-navigation",
+      "title": "Reading a knowledge graph before you have anything"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness",
+      "@type": "bootstrap:Skill",
+      "name": "confirm-harness",
+      "title": "Which harness, and where"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion",
+      "@type": "bootstrap:Skill",
+      "name": "discussion",
+      "title": "discussion — settling what an agent cannot read off disk"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion",
+      "@type": "bootstrap:Skill",
+      "name": "human-agent-discussion",
+      "title": "Asking a person, in one reusable way"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps",
+      "@type": "bootstrap:Skill",
+      "name": "initialization-steps",
+      "title": "Every initialization step, as the declarations name them"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
+      "@type": "bootstrap:Skill",
+      "name": "log-message",
+      "title": "Logging what you are doing"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-documents",
+      "@type": "bootstrap:Skill",
+      "name": "publish-documents",
+      "title": "The documents at their addresses: the primary step"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-site",
+      "@type": "bootstrap:Skill",
+      "name": "publish-site",
+      "title": "The site: an instance rendered for publication, and its address answering"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/root-readme",
+      "@type": "bootstrap:Skill",
+      "name": "root-readme",
+      "title": "The root README, and the one fact it must carry"
+    }
+  ],
+  "holdsGraph": [
+    "bootstrap:graphTypology/skills"
+  ],
+  "name": "skills",
+  "path": "skills/"
+}

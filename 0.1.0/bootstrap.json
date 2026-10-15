@@ -33,7 +33,7 @@
       "src": "ns.jsonld",
       "role": "vocabulary",
       "title": "bootstrap vocabulary",
-      "description": "Every term bootstrap defines, in order, and every Graph Kind it defines, as RDF and SKOS — the document bootstrap's namespace resolves to. Generated from bootstrap's own terms by bootstrap-tools; each term links to the schema that defines it."
+      "description": "Every term bootstrap defines, in order, and every Graph Typology it defines, as RDF and SKOS — the document bootstrap's namespace resolves to. Generated from bootstrap's own terms by its toolset; each term links to the schema that defines it."
     }
   ],
   "_directories_comment": "Every entry is a subdirectory rather than `bootstrap/` itself. `isSkillMd` is declaration-over-location: a markdown file that does NOT declare `$schema:` is a skill. README.md and AGENTS.md declare neither, so a graph rooted at `bootstrap/` would count this instance's two DECLARED ASSETS as skill nodes — the instance has already said what those files are, and a scan would contradict its own declaration. Keeping the graph one level down means the two mechanisms cannot collide. Declared explicitly rather than relying on DEFAULT_DIRECTORIES: a declaration that exists is honoured as written, so defaults do not apply to an instance that declares anything at all.",
@@ -75,7 +75,7 @@
     {
       "id": "skills",
       "path": "skills/",
-      "graphKinds": [
+      "graphTypologies": [
         "skills"
       ]
     },
@@ -83,7 +83,7 @@
       "id": "schemas",
       "path": "schemas/",
       "description": "The schemas bootstrap is checked against: `graph.schema.json`, the shape of a declaration and the definition of every term bootstrap uses; and the input and output of the discussion Process. Their published `$id`s do not change when a file moves.",
-      "graphKinds": [
+      "graphTypologies": [
         "schemas"
       ]
     },
@@ -91,7 +91,7 @@
       "id": "scenarios",
       "path": "scenarios/",
       "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
-      "graphKinds": [
+      "graphTypologies": [
         "scenarios"
       ]
     },
@@ -99,7 +99,7 @@
       "id": "processes",
       "path": "processes/",
       "description": "bootstrap's Processes: `initialize-harness.bpmn`, the only one an Actor starts; `discussion.bpmn`, which it calls to determine the harness and repositories; `human-agent-discussion.bpmn`, the reusable discussion every diagram calls to ask a person anything; `complete-initialization.bpmn`, which checks every initialization step the declarations name; and `log-message.bpmn`, which any step may call to record what it is doing. `ns.jsonld` defines the elements these diagrams add to BPMN (skill, role, precondition), written with the prefix `bootstrap.processes:`.",
-      "graphKinds": [
+      "graphTypologies": [
         "processes"
       ]
     },
@@ -107,7 +107,7 @@
       "id": "models",
       "path": "models/",
       "description": "Which languages a model is good at, and whether anybody checked. In BOOTSTRAP for the reason everything else here is: an agent reaching for the language it should communicate in has not yet loaded the harness that would otherwise answer, so a registry one layer up would be unreachable in exactly the case it exists for. `context`: read when a session opens, never written by a process — a person grants a validation, an agent never does, because a model's own claim about its languages is the thing the validation state exists to distrust.",
-      "graphKinds": [
+      "graphTypologies": [
         "models"
       ]
     }
@@ -124,5 +124,9 @@
     "_reachableAt_comment": "Where a person is sent to read about bootstrap, since bootstrap renders no pages of its own: its own README, relative to this directory. The site build publishes bootstrap's files as they sit, with each `.md` also rendered as `.html`, so the link stays inside bootstrap."
   },
   "_needs_comment": "The layer this instance sits on. Owner, 2026-09-20: \"So bootsteap, cat harness, fa-core, f-a, from bottom to top.\" Declared rather than hardcoded in the navbar, so the ordering is a fact of the repository and not of whichever consumer needed it first. An EMPTY list is an assertion that this instance sits on nothing — the floor — while an ABSENT one means nobody has said, and the two are different answers.",
-  "needs": []
+  "needs": [],
+  "_builtAtPublish_comment": "Owner, 2026-10-14 (B1). This instance's JSON-LD @context is generated at publish by the `jsonld:contexts` writer of the harness that mounts it, from the prefixes and content-context terms its documents use, flattened with the prefix tables of every instance it needs. Those tables are read at the CHECKOUT's pins, not at pins this instance's commit names, so no commit of it can hold the file current: it is built at publish and never committed (bean 63q4). It sits BESIDE the vocabulary, at ns.context.v1.jsonld, not at ns/context/v1.jsonld (owner, 2026-10-15, D1): this instance's namespace is a DOCUMENT, ns.jsonld, staged at the extensionless ns and <version>/ns, so ns cannot also be the directory a context under ns/context/ needs, and a static host cannot serve both. Named here by its writer's script name and by what it holds only: bootstrap names nothing above it (bean iwtn).",
+  "builtAtPublish": [
+    {"path": "ns.context.v1.jsonld", "writer": ["jsonld:contexts"], "because": "checkout", "reason": "the prefixes and content-context terms its documents use, flattened with the jsonldPrefixes of the layers it needs at the checkout's pins"}
+  ]
 }

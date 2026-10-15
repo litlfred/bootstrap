@@ -1,0 +1,105 @@
+{
+  "@context": "https://litlfred.github.io/bootstrap/subgraph/v0/context.jsonld",
+  "@id": "https://litlfred.github.io/bootstrap/subgraph/bootstrap/scenarios/",
+  "@type": "bootstrap:Subgraph",
+  "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
+  "hasMember": [
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
+      "@type": "bootstrap:Subgraph",
+      "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld",
+      "name": "scenarios",
+      "source": "https://litlfred.github.io/bootstrap/scenarios/",
+      "type": [
+        "bootstrap:graphTypology/scenarios"
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/bootstrapping-agent",
+      "@type": "bootstrap:Role",
+      "description": "An agent asked to set up a Harness with ONLY the knowledge bootstrap's README.md hands it. That constraint is the role, not a caveat on it: a Bootstrapping Agent has no MCP server, no harness, no work plan and no skills beyond those bootstrap carries, and a step that assumes any of those is a step a Bootstrapping Agent cannot perform. It stops being a Bootstrapping Agent the moment the harness is installed and it re-enters through that harness instead.",
+      "flowNodeRef": [
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_AskPerson",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_CheckDocuments",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_CheckStep",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_FollowStated",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ListSteps",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_PerformStep",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_RecordStep",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_Report",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/End_Complete",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/End_OpenStepsRecorded",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/GW_AllDone",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/GW_NextStep",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/GW_StepState",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/Start_CompleteInitialization",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_AskRequestor",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_DetermineWhere",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_ListHarnesses",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_ListLocations",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_RecordDetermination",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_RecordUnsettled",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/End_Settled",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/End_Unsettled",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/G_Settled",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/Start_Discussion",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_CompleteInitialization",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_DetermineHarness",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_Install",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_LogFailure",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_LogInstallStart",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_WriteRootReadme",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/End_Failed",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/End_Installed",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/GW_AlreadyInitialized",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/GW_HarnessChosen",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/GW_InstructionsFound",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/Start_InitializeHarness"
+      ],
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
+      "name": "Bootstrapping Agent",
+      "source": "https://litlfred.github.io/bootstrap/scenarios/roles.json"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/knowledge-graph-data-store",
+      "@type": "bootstrap:Role",
+      "description": "A git repository, reached either through the git CLI or through a forge's API. It is where a declaration and its graph are READ from and where a new instance's declaration is WRITTEN to. It is `actedUpon`: it holds and serves, and takes no part in deciding what should happen — which is why it carries no skills and why naming one for it would be a lie about what it does.",
+      "flowNodeRef": [
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ReadDeclarations",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_ReadDeclaration",
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_ReadLocation"
+      ],
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
+      "name": "Knowledge Graph Data Store",
+      "source": "https://litlfred.github.io/bootstrap/scenarios/roles.json"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/logger",
+      "@type": "bootstrap:Role",
+      "description": "A machine that accepts log messages and puts them somewhere a person can read. Like the Knowledge Graph Data Store it is `actedUpon` — it receives and records, takes no part in what happens next, and carries no skills, because the skill belongs to whoever is DOING the thing being logged. The Logger is not the author of a log line; it is where the line goes. That distinction is why `log-message` takes `actor` as a required input: the Logger cannot infer who acted, and a log that names the logger rather than the actor records nothing worth having.",
+      "flowNodeRef": [
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/A_Record"
+      ],
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
+      "name": "Logger",
+      "source": "https://litlfred.github.io/bootstrap/scenarios/roles.json"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/requestor",
+      "@type": "bootstrap:Role",
+      "description": "Wants to initialize — or bootstrap, or install, or load, or harness — a harness: bootstrap itself, or any Harness built on it. Carries no skills deliberately: WHICH harness this repository should become is a judgement about intent, and no instruction body produces it. The Bootstrapping Agent may narrow the list from context; only the Requestor settles it.",
+      "flowNodeRef": [
+        "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_Answer"
+      ],
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
+      "name": "Requestor",
+      "source": "https://litlfred.github.io/bootstrap/scenarios/roles.json"
+    }
+  ],
+  "holdsGraph": [
+    "bootstrap:graphTypology/scenarios"
+  ],
+  "name": "scenarios",
+  "path": "scenarios/"
+}

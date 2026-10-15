@@ -1,0 +1,690 @@
+{
+  "@context": "https://litlfred.github.io/bootstrap/subgraph/v0/context.jsonld",
+  "@id": "https://litlfred.github.io/bootstrap/subgraph/bootstrap/processes/",
+  "@type": "bootstrap:Subgraph",
+  "description": "bootstrap's Processes: `initialize-harness.bpmn`, the only one an Actor starts; `discussion.bpmn`, which it calls to determine the harness and repositories; `human-agent-discussion.bpmn`, the reusable discussion every diagram calls to ask a person anything; `complete-initialization.bpmn`, which checks every initialization step the declarations name; and `log-message.bpmn`, which any step may call to record what it is doing. `ns.jsonld` defines the elements these diagrams add to BPMN (skill, role, precondition), written with the prefix `bootstrap.processes:`.",
+  "hasMember": [
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/processes",
+      "@type": "bootstrap:Subgraph",
+      "name": "processes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
+      "@type": "bootstrap:Process",
+      "name": "Complete initialization"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_1",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_10",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_11",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "needs a person, or could not determine"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_12",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_13",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_14",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no, all checked"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_15",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_16",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_17",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_18",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_2",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_3",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_4",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_5",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_6",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "done"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_7",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "not done, and I can do it"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_8",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/flow/SF_CI_9",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "stated"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_AskPerson",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Ask the person to do what only they can"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_CheckDocuments",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Check the JSON Schemas and JSON-LD are at their IRIs"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_CheckStep",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Check it"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_FollowStated",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Follow it, and say that you did"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ListSteps",
+      "@type": "bootstrap:ProcessNode",
+      "name": "List the steps the declarations name"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_PerformStep",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Do it, then check again"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ReadDeclarations",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Read the declaration, and each one it needs"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_RecordStep",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Record the step in its state"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_Report",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Report every step"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/End_Complete",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Every step done"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/End_OpenStepsRecorded",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Open steps recorded, each with what to do"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/GW_AllDone",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Every checkable step done?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/GW_NextStep",
+      "@type": "bootstrap:ProcessNode",
+      "name": "A step not yet checked?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/GW_StepState",
+      "@type": "bootstrap:ProcessNode",
+      "name": "What did the check find?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/Start_CompleteInitialization",
+      "@type": "bootstrap:ProcessNode",
+      "name": "A harness is installed here"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
+      "@type": "bootstrap:Process",
+      "name": "Determine the harness and repositories"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Ask_Gate",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Harnesses_Locations",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Locations_Ask",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Record_End",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Settled_No",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no, or still open"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Settled_Yes",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Start_Where",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Unsettled_End",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/flow/Flow_Where_Harnesses",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_AskRequestor",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Ask the Requestor: which harness, and where?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_DetermineWhere",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Determine where you are: process, roles, context"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_ListHarnesses",
+      "@type": "bootstrap:ProcessNode",
+      "name": "List the harnesses this could be"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_ListLocations",
+      "@type": "bootstrap:ProcessNode",
+      "name": "List the locations this could install to"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_RecordDetermination",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Record the determination"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_RecordUnsettled",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Record what is still open"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/End_Settled",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Harness and repositories determined"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/End_Unsettled",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Still open, and said so"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/G_Settled",
+      "@type": "bootstrap:ProcessNode",
+      "name": "One harness, and where it goes?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/Start_Discussion",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Which harness, and where, is not known"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
+      "@type": "bootstrap:Process",
+      "name": "Human–agent discussion"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_1",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_10",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no answer"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_11",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_12",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_13",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "declined"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_14",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_15",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_16",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_2",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_3",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_4",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_5",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_6",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_7",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "settles it"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_8",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "unclear"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_9",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P1",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P2",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P3",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P4",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P5",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P6",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P7",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "the caller's"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/flow/SF_HAD_P8",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "a precondition: determine again"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_Answer",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Answer, decline, or say nothing"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_ApplyDefault",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Apply the stated default, and say so"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_AskUndeterminedFirst",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Ask first about what could not be determined"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_DetermineContext",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Determine the context: what is known, and already decided"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_DetermineProcess",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Determine the process and task, or that you are idle"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_DetermineRoles",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Determine the roles: which you act as, and the person's"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_FollowUp",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Follow up, narrower"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_GiveContext",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Say what is being decided, and why it matters now"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_LayOutOptions",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Lay out the options, with what each costs"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_PutQuestion",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Ask ONE question"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_Recommend",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Recommend one, and say what happens with no answer"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_RecordAnswer",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Record the answer, and who gave it"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_RecordUnsettled",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Record what is still open"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/End_Answered",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Answered"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/End_Defaulted",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Default applied, and said so"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/End_Unsettled",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Still open, and said so"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/GW_DefaultAllowed",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Did the caller allow a default?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/GW_Determined",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Context, roles and process all determined?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/GW_WhatCameBack",
+      "@type": "bootstrap:ProcessNode",
+      "name": "What came back?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/GW_WhichQuestion",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Was that the caller's question, or a precondition?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/Start_HumanAgentDiscussion",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Something only a person can supply is needed"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
+      "@type": "bootstrap:Process",
+      "name": "Initialize a harness"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_1",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_10",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_11",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_12",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_13",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_14",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "already, as something else"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_15",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "not yet"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_16",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_17",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "already, as the chosen harness"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_18",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_4",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_5",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "none"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_6",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "one"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_7",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_8",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/flow/SF_IH_9",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_CompleteInitialization",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Make sure every step is done"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_DetermineHarness",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Determine which harness, and where"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_Install",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Follow them, at each location"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_LogFailure",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Log the failure"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_LogInstallStart",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Log the start of the install"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_ReadDeclaration",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Read the harness's declaration and instructions"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_ReadLocation",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Read what each location already is"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_WriteRootReadme",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Write the root README, if it is not there"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/End_Failed",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Failed"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/End_Installed",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Harness installed, every step checked"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/GW_AlreadyInitialized",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Already initialized?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/GW_HarnessChosen",
+      "@type": "bootstrap:ProcessNode",
+      "name": "One harness?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/GW_InstructionsFound",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Instructions there?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/Start_InitializeHarness",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Asked to initialize a harness"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage",
+      "@type": "bootstrap:Process",
+      "name": "Log a message"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/flow/SF_LM_1",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/flow/SF_LM_2",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/flow/SF_LM_3",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "no"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/flow/SF_LM_4",
+      "@type": "bootstrap:SequenceFlow",
+      "name": "yes"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/flow/SF_LM_5",
+      "@type": "bootstrap:SequenceFlow"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/A_Compose",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Compose the message"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/A_Record",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Record it where a\nperson can read it"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/End_Logged",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Recorded"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/End_NotLogged",
+      "@type": "bootstrap:ProcessNode",
+      "name": "Not recorded — say so"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/GW_Complete",
+      "@type": "bootstrap:ProcessNode",
+      "name": "All five present?"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/Start_LogMessage",
+      "@type": "bootstrap:ProcessNode",
+      "name": "An actor has something to record"
+    }
+  ],
+  "holdsGraph": [
+    "bootstrap:graphTypology/processes"
+  ],
+  "name": "processes",
+  "path": "processes/"
+}

@@ -15,10 +15,10 @@ that trade under `renderExemption`, and its `owes` field names this Skill. An
 exemption with nothing owed in its place would be a gap.
 
 bootstrap runs nothing (FR-7 of the [README](../README.md)), so the file is
-written by bootstrap-tools, bootstrap's own tools repository. It is the one
+written by bootstrap's toolset, a separate repository. It is the one
 file bootstrap publishes that names what wrote it, and it says so inside
 itself: an `rdfs:comment` that it is generated and not to be edited, and
-`prov:wasAttributedTo` naming bootstrap-tools. This Skill states what the file
+`prov:wasAttributedTo` naming the toolset's repository. This Skill states what the file
 must hold. Its shape is fixed by a schema, and the tool is tested against it.
 
 ## In whose terms
@@ -27,14 +27,14 @@ Every class is one of bootstrap's own terms (`bootstrap:Skill`,
 `bootstrap:Process`, `bootstrap:Subgraph`, …), so the file names nothing above
 bootstrap. Every property is a published standard wherever one exists:
 `rdfs:label`; Dublin Core for `title`, `description`, `source`, `isPartOf`,
-and `type`, which points a Subgraph at the Graph Kinds it holds; BPMN's own
+and `type`, which points a Subgraph at the Graph Typologies it holds; BPMN's own
 `sourceRef`, `targetRef` and `flowNodeRef` for a Process's arrows and lanes;
 and PROV for provenance. Only the link from a step to the Skill it names is
 bootstrap's own, because no standard says it.
 
 ## What goes in it
 
-The declaration itself, its Subgraphs and their Graph Kinds, the declared
+The declaration itself, its Subgraphs and their Graph Typologies, the declared
 Assets, the Skills in the `skills` Subgraph, the Processes in `processes`
 (with their steps and arrows), and the Roles in `scenarios`. The tool finds each Subgraph
 **through the declaration**, never by walking the directory tree, so a

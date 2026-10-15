@@ -1,0 +1,49 @@
+{
+  "@context": "https://litlfred.github.io/bootstrap/subgraph/v0/context.jsonld",
+  "@id": "https://litlfred.github.io/bootstrap/subgraph/bootstrap/",
+  "@type": "bootstrap:Subgraph",
+  "description": "The graph an agent reads before it knows what this repository is.",
+  "hasMember": [
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#asset/agent-instructions",
+      "@type": "bootstrap:Asset",
+      "name": "agent-instructions",
+      "title": "AGENTS.md — bootstrap"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#asset/readme",
+      "@type": "bootstrap:Asset",
+      "name": "readme",
+      "title": "bootstrap"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#asset/vocabulary",
+      "@type": "bootstrap:Asset",
+      "name": "vocabulary",
+      "title": "bootstrap vocabulary"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/models",
+      "@type": "bootstrap:Subgraph",
+      "name": "models"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/schemas",
+      "@type": "bootstrap:Subgraph",
+      "name": "schemas"
+    }
+  ],
+  "hasSubgraph": [
+    "https://litlfred.github.io/bootstrap/subgraph/bootstrap/processes/",
+    "https://litlfred.github.io/bootstrap/subgraph/bootstrap/scenarios/",
+    "https://litlfred.github.io/bootstrap/subgraph/bootstrap/skills/"
+  ],
+  "holdsGraph": [
+    "bootstrap:graphTypology/processes",
+    "bootstrap:graphTypology/scenarios",
+    "bootstrap:graphTypology/skills"
+  ],
+  "name": "bootstrap",
+  "path": "./",
+  "title": "Bootstrap"
+}

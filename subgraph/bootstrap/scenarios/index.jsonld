@@ -1,0 +1,38 @@
+{
+  "@context": "https://litlfred.github.io/bootstrap/subgraph/v0/context.jsonld",
+  "@id": "https://litlfred.github.io/bootstrap/subgraph/bootstrap/scenarios/",
+  "@type": "bootstrap:Subgraph",
+  "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
+  "hasMember": [
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
+      "@type": "bootstrap:Subgraph",
+      "name": "scenarios"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/bootstrapping-agent",
+      "@type": "bootstrap:Role",
+      "name": "Bootstrapping Agent"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/knowledge-graph-data-store",
+      "@type": "bootstrap:Role",
+      "name": "Knowledge Graph Data Store"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/logger",
+      "@type": "bootstrap:Role",
+      "name": "Logger"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/requestor",
+      "@type": "bootstrap:Role",
+      "name": "Requestor"
+    }
+  ],
+  "holdsGraph": [
+    "bootstrap:graphTypology/scenarios"
+  ],
+  "name": "scenarios",
+  "path": "scenarios/"
+}

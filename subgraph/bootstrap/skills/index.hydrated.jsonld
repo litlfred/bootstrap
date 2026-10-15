@@ -1,0 +1,120 @@
+{
+  "@context": "https://litlfred.github.io/bootstrap/subgraph/v0/context.jsonld",
+  "@id": "https://litlfred.github.io/bootstrap/subgraph/bootstrap/skills/",
+  "@type": "bootstrap:Subgraph",
+  "hasMember": [
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "@type": "bootstrap:Subgraph",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld",
+      "name": "skills",
+      "source": "https://litlfred.github.io/bootstrap/skills/",
+      "type": [
+        "bootstrap:graphTypology/skills"
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-graph-emission",
+      "@type": "bootstrap:Skill",
+      "description": "What bootstrap's own Knowledge Graph must be when it is written out as a data file, `.jsonld` with a `.json` copy. bootstrap renders no pages for a person to browse, so this file is how it shows it is a Knowledge Graph at all.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "bootstrap-graph-emission",
+      "source": "https://litlfred.github.io/bootstrap/skills/bootstrap-graph-emission.md",
+      "title": "Writing out bootstrap's own Knowledge Graph"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-graph-publication",
+      "@type": "bootstrap:Skill",
+      "description": "Where bootstrap's Knowledge Graph file is published, why its `@id` must be exactly that address, why a `.json` copy sits beside the `.jsonld`, and why the file is not kept in the repository.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "bootstrap-graph-publication",
+      "source": "https://litlfred.github.io/bootstrap/skills/bootstrap-graph-publication.md",
+      "title": "Publishing bootstrap's Knowledge Graph"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation",
+      "@type": "bootstrap:Skill",
+      "description": "Read and navigate a knowledge graph with nothing installed — no MCP server, no tools, no harness. The first skill bootstrap hands you, because the second step of the handoff cannot be followed without it. Named `bootstrap-` so it cannot be confused with a navigation Skill of a Harness that is installed.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "bootstrap-kg-navigation",
+      "source": "https://litlfred.github.io/bootstrap/skills/bootstrap-kg-navigation.md",
+      "title": "Reading a knowledge graph before you have anything"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness",
+      "@type": "bootstrap:Skill",
+      "description": "Narrow the harnesses and locations this could be, then have the Requestor settle it. Takes a list; returns at most ONE harness. It needs a person: the Requestor settles it, never the agent.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "confirm-harness",
+      "source": "https://litlfred.github.io/bootstrap/skills/confirm-harness.md",
+      "title": "Which harness, and where"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion",
+      "@type": "bootstrap:Skill",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "discussion",
+      "source": "https://litlfred.github.io/bootstrap/skills/discussion.md",
+      "title": "discussion — settling what an agent cannot read off disk"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion",
+      "@type": "bootstrap:Skill",
+      "description": "Ask a person (or a sibling agent) for what no file holds. First determine where you are — the context, the Role you act as and theirs, the Process and task (or that you are idle) — and ask about whichever you cannot determine before anything else. Then context, the options, a recommendation and what happens with no answer, then ONE question. The reusable discussion every bootstrap diagram calls when it needs a person; it records the answer, an applied default, or what is still open, and never a guess.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "human-agent-discussion",
+      "source": "https://litlfred.github.io/bootstrap/skills/human-agent-discussion.md",
+      "title": "Asking a person, in one reusable way"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps",
+      "@type": "bootstrap:Skill",
+      "description": "Walk every initialization step the declarations name (the instance's own and each one it needs), check each before doing anything, do what can be done, ask for what only a person can do, and report every step as done, not done, could not determine, or stated.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "initialization-steps",
+      "source": "https://litlfred.github.io/bootstrap/skills/initialization-steps.md",
+      "title": "Every initialization step, as the declarations name them"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
+      "@type": "bootstrap:Skill",
+      "description": "Say what you are doing, to the Logger, in a form a reader can act on. Five required fields and one optional body; an incomplete message is not logged. Callable from any task in any process, and required by some.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "log-message",
+      "source": "https://litlfred.github.io/bootstrap/skills/log-message.md",
+      "title": "Logging what you are doing"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-documents",
+      "@type": "bootstrap:Skill",
+      "description": "The primary step of initializing a Knowledge Graph harness: every JSON Schema and JSON-LD document it names an address for (schemas, vocabulary, diagram vocabulary, graph export, each with its @context) is published AT that address, and the address answers. Checked first, right after the declaration is read.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "publish-documents",
+      "source": "https://litlfred.github.io/bootstrap/skills/publish-documents.md",
+      "title": "The documents at their addresses: the primary step"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-site",
+      "@type": "bootstrap:Skill",
+      "description": "Give an instance a site: its Knowledge Graph rendered for publication at its site address, and the address answering. Four checks — a workflow publishes it, the gh-pages branch exists, Pages serves that branch, the address answers. How the rendering is staged and pushed is the toolset's own process, not this skill's.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "publish-site",
+      "source": "https://litlfred.github.io/bootstrap/skills/publish-site.md",
+      "title": "The site: an instance rendered for publication, and its address answering"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/root-readme",
+      "@type": "bootstrap:Skill",
+      "description": "Write the repository's root README when there is none, carrying a link to the harness that was installed and the overall install status. Never replaces one that exists. It runs only once the install has succeeded.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "root-readme",
+      "source": "https://litlfred.github.io/bootstrap/skills/root-readme.md",
+      "title": "The root README, and the one fact it must carry"
+    }
+  ],
+  "holdsGraph": [
+    "bootstrap:graphTypology/skills"
+  ],
+  "name": "skills",
+  "path": "skills/"
+}
