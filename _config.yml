@@ -108,12 +108,24 @@ defaults:
   - scope: { path: "0.1.0/skills/initialization-steps.md" }
     values:
       edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/initialization-steps.md"
+  - scope: { path: "skills/knowledge-graph-data-store.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/knowledge-graph-data-store.md"
+  - scope: { path: "0.1.0/skills/knowledge-graph-data-store.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/knowledge-graph-data-store.md"
   - scope: { path: "skills/log-message.md" }
     values:
       edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/log-message.md"
   - scope: { path: "0.1.0/skills/log-message.md" }
     values:
       edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/log-message.md"
+  - scope: { path: "skills/logger.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/logger.md"
+  - scope: { path: "0.1.0/skills/logger.md" }
+    values:
+      edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/logger.md"
   - scope: { path: "skills/publish-documents.md" }
     values:
       edit_url: "https://github.com/litlfred/bootstrap/edit/main/skills/publish-documents.md"

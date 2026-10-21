@@ -53,10 +53,6 @@
       "@id": "bpmn:flowNodeRef",
       "@type": "@id"
     },
-    "skill": {
-      "@id": "processes:skill",
-      "@type": "@id"
-    },
     "versionInfo": "owl:versionInfo",
     "generatedAtTime": {
       "@id": "prov:generatedAtTime",
@@ -326,7 +322,7 @@
       "label": "Ask the person to do what only they can",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion"
     },
     {
@@ -335,7 +331,7 @@
       "label": "Check the JSON Schemas and JSON-LD are at their IRIs",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-documents"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-documents"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_CheckStep",
@@ -343,7 +339,7 @@
       "label": "Check it",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_FollowStated",
@@ -351,7 +347,7 @@
       "label": "Follow it, and say that you did",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ListSteps",
@@ -359,7 +355,7 @@
       "label": "List the steps the declarations name",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_PerformStep",
@@ -367,7 +363,7 @@
       "label": "Do it, then check again",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ReadDeclarations",
@@ -375,7 +371,7 @@
       "label": "Read the declaration, and each one it needs",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_RecordStep",
@@ -383,7 +379,7 @@
       "label": "Record the step in its state",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_Report",
@@ -391,7 +387,7 @@
       "label": "Report every step",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage"
     },
     {
@@ -520,7 +516,7 @@
       "label": "Ask the Requestor: which harness, and where?",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion"
     },
     {
@@ -529,7 +525,7 @@
       "label": "Determine where you are: process, roles, context",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_ListHarnesses",
@@ -537,7 +533,7 @@
       "label": "List the harnesses this could be",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_ListLocations",
@@ -545,7 +541,7 @@
       "label": "List the locations this could install to",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_RecordDetermination",
@@ -553,7 +549,7 @@
       "label": "Record the determination",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/A_RecordUnsettled",
@@ -561,7 +557,7 @@
       "label": "Record what is still open",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion/node/End_Settled",
@@ -792,7 +788,7 @@
       "label": "Apply the stated default, and say so",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_AskUndeterminedFirst",
@@ -800,7 +796,7 @@
       "label": "Ask first about what could not be determined",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_DetermineContext",
@@ -808,7 +804,7 @@
       "label": "Determine the context: what is known, and already decided",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_DetermineProcess",
@@ -816,7 +812,7 @@
       "label": "Determine the process and task, or that you are idle",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_DetermineRoles",
@@ -824,7 +820,7 @@
       "label": "Determine the roles: which you act as, and the person's",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_FollowUp",
@@ -832,7 +828,7 @@
       "label": "Follow up, narrower",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_GiveContext",
@@ -840,7 +836,7 @@
       "label": "Say what is being decided, and why it matters now",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_LayOutOptions",
@@ -848,7 +844,7 @@
       "label": "Lay out the options, with what each costs",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_PutQuestion",
@@ -856,7 +852,7 @@
       "label": "Ask ONE question",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_Recommend",
@@ -864,7 +860,7 @@
       "label": "Recommend one, and say what happens with no answer",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_RecordAnswer",
@@ -872,7 +868,7 @@
       "label": "Record the answer, and who gave it",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/A_RecordUnsettled",
@@ -880,7 +876,7 @@
       "label": "Record what is still open",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/human-agent-discussion"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_HumanAgentDiscussion/node/End_Answered",
@@ -1078,7 +1074,7 @@
       "label": "Make sure every step is done",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/initialization-steps",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization"
     },
     {
@@ -1087,7 +1083,7 @@
       "label": "Determine which harness, and where",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/confirm-harness",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_Discussion"
     },
     {
@@ -1096,7 +1092,7 @@
       "label": "Follow them, at each location",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_LogFailure",
@@ -1104,7 +1100,7 @@
       "label": "Log the failure",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage"
     },
     {
@@ -1113,7 +1109,7 @@
       "label": "Log the start of the install",
       "type": "bpmn:callActivity",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
       "calledElement": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage"
     },
     {
@@ -1122,7 +1118,7 @@
       "label": "Read the harness's declaration and instructions",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_ReadLocation",
@@ -1130,7 +1126,7 @@
       "label": "Read what each location already is",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/bootstrap-kg-navigation"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_WriteRootReadme",
@@ -1138,7 +1134,7 @@
       "label": "Write the root README, if it is not there",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/root-readme"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/root-readme"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/End_Failed",
@@ -1235,7 +1231,7 @@
       "label": "Compose the message",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/A_Record",
@@ -1243,7 +1239,7 @@
       "label": "Record it where a\nperson can read it",
       "type": "bpmn:task",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage",
-      "skill": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message"
+      "requires": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/logger"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/End_Logged",
@@ -1323,7 +1319,7 @@
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/knowledge-graph-data-store",
       "@type": "bootstrap:Role",
       "label": "Knowledge Graph Data Store",
-      "description": "A git repository, reached either through the git CLI or through a forge's API. It is where a declaration and its graph are READ from and where a new instance's declaration is WRITTEN to. It is `actedUpon`: it holds and serves, and takes no part in deciding what should happen — which is why it carries no skills and why naming one for it would be a lie about what it does.",
+      "description": "A git repository, reached either through the git CLI or through a forge's API. It is where a declaration and its graph are READ from and where a new instance's declaration is WRITTEN to. It holds and serves, and takes no part in deciding what should happen. Its skill is its contract, `knowledge-graph-data-store`: what it must serve and keep, which a test can check (owner, 2026-10-16).",
       "source": "https://litlfred.github.io/bootstrap/scenarios/roles.json",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
       "flowNodeRef": [
@@ -1336,7 +1332,7 @@
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/logger",
       "@type": "bootstrap:Role",
       "label": "Logger",
-      "description": "A machine that accepts log messages and puts them somewhere a person can read. Like the Knowledge Graph Data Store it is `actedUpon` — it receives and records, takes no part in what happens next, and carries no skills, because the skill belongs to whoever is DOING the thing being logged. The Logger is not the author of a log line; it is where the line goes. That distinction is why `log-message` takes `actor` as a required input: the Logger cannot infer who acted, and a log that names the logger rather than the actor records nothing worth having.",
+      "description": "A machine that accepts log messages and puts them somewhere a person can read. It receives and records, and takes no part in what happens next. Its skill is its contract, `logger`: record a complete message unchanged and attributed to its actor (owner, 2026-10-16). Composing the message is a different skill, `log-message`, which belongs to whoever is DOING the thing being logged. The Logger is not the author of a log line; it is where the line goes. That distinction is why `log-message` takes `actor` as a required input: the Logger cannot infer who acted, and a log that names the logger rather than the actor records nothing worth having.",
       "source": "https://litlfred.github.io/bootstrap/scenarios/roles.json",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/scenarios",
       "flowNodeRef": [
@@ -1417,12 +1413,30 @@
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills"
     },
     {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/knowledge-graph-data-store",
+      "@type": "bootstrap:Skill",
+      "label": "knowledge-graph-data-store",
+      "title": "The Knowledge Graph Data Store's contract",
+      "description": "The contract a Knowledge Graph Data Store keeps: serve a declaration, its graph and its instructions exactly as committed, say plainly when a file is absent, and keep a new instance's declaration once it is written. A mechanical Actor plays this Role; this is what it must do, and what it can be tested against.",
+      "source": "https://litlfred.github.io/bootstrap/skills/knowledge-graph-data-store.md",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills"
+    },
+    {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
       "@type": "bootstrap:Skill",
       "label": "log-message",
       "title": "Logging what you are doing",
       "description": "Say what you are doing, to the Logger, in a form a reader can act on. Five required fields and one optional body; an incomplete message is not logged. Callable from any task in any process, and required by some.",
       "source": "https://litlfred.github.io/bootstrap/skills/log-message.md",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/logger",
+      "@type": "bootstrap:Skill",
+      "label": "logger",
+      "title": "The Logger's contract",
+      "description": "The contract a Logger keeps: accept a complete log message, record it unchanged where a person can read it, attributed to the actor the message names. A mechanical Actor plays this Role; this is what it must do, and what it can be tested against.",
+      "source": "https://litlfred.github.io/bootstrap/skills/logger.md",
       "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills"
     },
     {
@@ -1463,7 +1477,7 @@
     "bootstrap:ProcessNode": 66,
     "bootstrap:Role": 4,
     "bootstrap:SequenceFlow": 72,
-    "bootstrap:Skill": 11,
+    "bootstrap:Skill": 13,
     "bootstrap:Subgraph": 5
   },
   "problems": []

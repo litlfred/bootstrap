@@ -76,6 +76,15 @@
       "title": "Every initialization step, as the declarations name them"
     },
     {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/knowledge-graph-data-store",
+      "@type": "bootstrap:Skill",
+      "description": "The contract a Knowledge Graph Data Store keeps: serve a declaration, its graph and its instructions exactly as committed, say plainly when a file is absent, and keep a new instance's declaration once it is written. A mechanical Actor plays this Role; this is what it must do, and what it can be tested against.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "knowledge-graph-data-store",
+      "source": "https://litlfred.github.io/bootstrap/skills/knowledge-graph-data-store.md",
+      "title": "The Knowledge Graph Data Store's contract"
+    },
+    {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
       "@type": "bootstrap:Skill",
       "description": "Say what you are doing, to the Logger, in a form a reader can act on. Five required fields and one optional body; an incomplete message is not logged. Callable from any task in any process, and required by some.",
@@ -83,6 +92,15 @@
       "name": "log-message",
       "source": "https://litlfred.github.io/bootstrap/skills/log-message.md",
       "title": "Logging what you are doing"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/logger",
+      "@type": "bootstrap:Skill",
+      "description": "The contract a Logger keeps: accept a complete log message, record it unchanged where a person can read it, attributed to the actor the message names. A mechanical Actor plays this Role; this is what it must do, and what it can be tested against.",
+      "isPartOf": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#directory/skills",
+      "name": "logger",
+      "source": "https://litlfred.github.io/bootstrap/skills/logger.md",
+      "title": "The Logger's contract"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-documents",

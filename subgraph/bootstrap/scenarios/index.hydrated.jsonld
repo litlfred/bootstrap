@@ -64,7 +64,7 @@
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/knowledge-graph-data-store",
       "@type": "bootstrap:Role",
-      "description": "A git repository, reached either through the git CLI or through a forge's API. It is where a declaration and its graph are READ from and where a new instance's declaration is WRITTEN to. It is `actedUpon`: it holds and serves, and takes no part in deciding what should happen — which is why it carries no skills and why naming one for it would be a lie about what it does.",
+      "description": "A git repository, reached either through the git CLI or through a forge's API. It is where a declaration and its graph are READ from and where a new instance's declaration is WRITTEN to. It holds and serves, and takes no part in deciding what should happen. Its skill is its contract, `knowledge-graph-data-store`: what it must serve and keep, which a test can check (owner, 2026-10-16).",
       "flowNodeRef": [
         "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_CompleteInitialization/node/A_ReadDeclarations",
         "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_InitializeHarness/node/A_ReadDeclaration",
@@ -77,7 +77,7 @@
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#role/logger",
       "@type": "bootstrap:Role",
-      "description": "A machine that accepts log messages and puts them somewhere a person can read. Like the Knowledge Graph Data Store it is `actedUpon` — it receives and records, takes no part in what happens next, and carries no skills, because the skill belongs to whoever is DOING the thing being logged. The Logger is not the author of a log line; it is where the line goes. That distinction is why `log-message` takes `actor` as a required input: the Logger cannot infer who acted, and a log that names the logger rather than the actor records nothing worth having.",
+      "description": "A machine that accepts log messages and puts them somewhere a person can read. It receives and records, and takes no part in what happens next. Its skill is its contract, `logger`: record a complete message unchanged and attributed to its actor (owner, 2026-10-16). Composing the message is a different skill, `log-message`, which belongs to whoever is DOING the thing being logged. The Logger is not the author of a log line; it is where the line goes. That distinction is why `log-message` takes `actor` as a required input: the Logger cannot infer who acted, and a log that names the logger rather than the actor records nothing worth having.",
       "flowNodeRef": [
         "https://litlfred.github.io/bootstrap/bootstrap.jsonld#process/Process_LogMessage/node/A_Record"
       ],

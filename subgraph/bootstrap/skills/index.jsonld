@@ -51,10 +51,22 @@
       "title": "Every initialization step, as the declarations name them"
     },
     {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/knowledge-graph-data-store",
+      "@type": "bootstrap:Skill",
+      "name": "knowledge-graph-data-store",
+      "title": "The Knowledge Graph Data Store's contract"
+    },
+    {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/log-message",
       "@type": "bootstrap:Skill",
       "name": "log-message",
       "title": "Logging what you are doing"
+    },
+    {
+      "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/logger",
+      "@type": "bootstrap:Skill",
+      "name": "logger",
+      "title": "The Logger's contract"
     },
     {
       "@id": "https://litlfred.github.io/bootstrap/bootstrap.jsonld#skill/publish-documents",
