@@ -30,9 +30,9 @@ The address follows the general pattern for anything a Harness publishes:
 ## Each subject's own address
 
 The file names itself; it also names everything in it. A **subject** — a
-Skill, a Process, a Role, a Subgraph, an Asset, anything the Knowledge Graph
-holds — is named by a path under the Harness's address, **never by a
-`#fragment` of the file**:
+Skill, a Process, a step or lane of a Process, a Role, a Subgraph, an Asset,
+anything the Knowledge Graph holds except an arrow — is named by a path
+under the Harness's address, **never by a `#fragment` of the file**:
 
     <base>/bootstrap/<kind>/<id>                       a subject
     <base>/bootstrap/bootstrap.jsonld#<kind>/<id>      not this
@@ -44,12 +44,19 @@ So a Skill is `<base>/bootstrap/skill/publish-site`: the folder the file sits
 in, then the kind, then the id. Any other Harness does the same under its own
 address, `<base>/<harness name>/<kind>/<id>`.
 
-**Not decided yet: the parts of a Process.** It is still open whether a
-Process's steps, arrows and lanes are paths too
-(`…/process/<process>/node/<step>`) or stay fragments of the Process's own
-address (`…/process/<process>#node/<step>`). That is waiting on the owner
-([issue #22](https://github.com/litlfred/bootstrap/issues/22)). Until then,
-leave them as the toolset writes them.
+**The parts of a Process.** A step and a lane are subjects; an arrow is not:
+
+    <base>/bootstrap/process/<process>/node/<step>     a step: its own address
+    <base>/bootstrap/process/<process>/lane/<lane>     a lane: its own address
+    <base>/bootstrap/process/<process>#flow/<arrow>    an arrow: a fragment of
+                                                       the Process's own page
+
+Owner, 2026-10-23T14:56Z, choosing that option: *"Steps and lanes get pages,
+and flows stay fragments of the process page … Everything anyone cites (a
+step, a role's lane) is a real resource, and the arrows, which only matter
+inside their diagram, stay on the process page."* An arrow is the one
+`#fragment` allowed for anything a Knowledge Graph holds; the other `#` is
+the vocabulary-term exception below.
 
 Owner, 2026-10-23: *"hashes not so good... why not
 `<instance doc>/<kind>/<id>`?"*, and, agreeing to the reasons below: *"yes
@@ -65,10 +72,10 @@ Why:
   its own history, cached on its own, linked to on its own.
 - **`#` already means a place on a web page.** Using it for what a thing *is*
   mixes that up with where to scroll.
-- **Paths nest**; fragments do not.
+- **Paths nest** (`…/process/<process>/node/<step>`); fragments do not.
 - **It is the convention FHIR uses**: `<base>/<Type>/<id>`.
 
-**The one exception is a vocabulary term**, a glossary's terms included.
+**The other exception is a vocabulary term**, a glossary's terms included.
 `ns.jsonld` keeps `…/ns#Term`:
 one small file holds every term, and fetching all of it is what a reader of a
 term wants. A term says what a word means; a subject is a thing that has its
