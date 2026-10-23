@@ -1,7 +1,7 @@
 # Publish this layer's JSON-LD context to gh-pages, at
 # <iriBase>ns.context.v1.jsonld, on every push to main (bean
 # 63q4, owner 2026-10-15). Beside the vocabulary, not under ns/ (owner
-# 2026-10-15, D1): this layer's ns is a document, served at <iriBase><version>/ns,
+# 2026-10-15, D1): this layer's ns is a document, served at <iriBase>v<major>/ns,
 # so ns/ cannot also be a directory there. The reusable workflow reads the
 # path off the build, so nothing here spells it. Everything is decided in the
 # reusable workflow: it builds only this instance's context, writes that one
