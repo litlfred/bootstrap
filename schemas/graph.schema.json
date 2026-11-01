@@ -41,7 +41,6 @@
           "path": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(?![/\\\\]|[A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$",
             "description": "The directory, relative to the declaration."
           },
           "graphTypologies": {
@@ -135,7 +134,6 @@
           "src": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(?![/\\\\]|[A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$",
             "description": "The file, relative to the declaration."
           },
           "role": {
@@ -275,7 +273,6 @@
         "path": {
           "type": "string",
           "minLength": 1,
-          "pattern": "^(?![/\\\\]|[A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$",
           "description": "The directory, relative to the declaration."
         },
         "graphTypologies": {
@@ -352,7 +349,6 @@
         "src": {
           "type": "string",
           "minLength": 1,
-          "pattern": "^(?![/\\\\]|[A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$",
           "description": "The file, relative to the declaration."
         },
         "role": {
