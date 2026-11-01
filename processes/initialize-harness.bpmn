@@ -141,65 +141,67 @@ WRITING IT IS NOT A PROCESS WRITE. `instance-readme` declares `layer: context`, 
   <bpmndi:BPMNDiagram id="Diagram_Process_InitializeHarness">
     <bpmndi:BPMNPlane id="Plane_Process_InitializeHarness" bpmnElement="Collaboration_Process_InitializeHarness">
       <bpmndi:BPMNShape id="Shape_Participant_Process_InitializeHarness" bpmnElement="Participant_Process_InitializeHarness" isHorizontal="true">
-        <dc:Bounds x="140" y="80" width="2360" height="500"/>
+        <dc:Bounds x="140" y="80" width="2360" height="500" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Lane_BootstrappingAgent" bpmnElement="Lane_BootstrappingAgent" isHorizontal="true">
-        <dc:Bounds x="170" y="80" width="2330" height="500"/>
+        <dc:Bounds x="170" y="80" width="2330" height="500" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Start_InitializeHarness" bpmnElement="Start_InitializeHarness">
-        <dc:Bounds x="232" y="212" width="36" height="36"/>
+        <dc:Bounds x="232" y="212" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_DetermineHarness" bpmnElement="A_DetermineHarness">
-        <dc:Bounds x="365" y="190" width="150" height="80"/>
+        <dc:Bounds x="380" y="170" width="120" height="120" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_GW_HarnessChosen" bpmnElement="GW_HarnessChosen" isMarkerVisible="true">
-        <dc:Bounds x="605" y="205" width="50" height="50"/>
+        <dc:Bounds x="605" y="205" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="659" y="212.5" width="90" height="35" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_ReadLocation" bpmnElement="A_ReadLocation">
-        <dc:Bounds x="745" y="440" width="150" height="80"/>
+        <dc:Bounds x="745" y="440" width="150" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_GW_AlreadyInitialized" bpmnElement="GW_AlreadyInitialized" isMarkerVisible="true">
-        <dc:Bounds x="985" y="205" width="50" height="50"/>
+        <dc:Bounds x="985" y="205" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="891" y="259" width="90" height="35" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_ReadDeclaration" bpmnElement="A_ReadDeclaration">
-        <dc:Bounds x="1125" y="440" width="150" height="80"/>
+        <dc:Bounds x="1125" y="440" width="150" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_GW_InstructionsFound" bpmnElement="GW_InstructionsFound" isMarkerVisible="true">
-        <dc:Bounds x="1365" y="205" width="50" height="50"/>
+        <dc:Bounds x="1365" y="205" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_LogInstallStart" bpmnElement="A_LogInstallStart">
-        <dc:Bounds x="1505" y="190" width="150" height="80"/>
+        <dc:Bounds x="1520" y="170" width="120" height="120" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_Install" bpmnElement="A_Install">
-        <dc:Bounds x="1695" y="190" width="150" height="80"/>
+        <dc:Bounds x="1710" y="170" width="120" height="120" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_WriteRootReadme" bpmnElement="A_WriteRootReadme">
-        <dc:Bounds x="1885" y="190" width="150" height="80"/>
+        <dc:Bounds x="1900" y="170" width="120" height="120" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_CompleteInitialization" bpmnElement="A_CompleteInitialization">
-        <dc:Bounds x="2075" y="190" width="150" height="80"/>
+        <dc:Bounds x="2090" y="170" width="120" height="120" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_LogFailure" bpmnElement="A_LogFailure">
-        <dc:Bounds x="2075" y="90" width="150" height="80"/>
+        <dc:Bounds x="2075" y="92" width="150" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_End_Installed" bpmnElement="End_Installed">
-        <dc:Bounds x="2322" y="212" width="36" height="36"/>
+        <dc:Bounds x="2322" y="212" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_End_Failed" bpmnElement="End_Failed">
-        <dc:Bounds x="2322" y="112" width="36" height="36"/>
+        <dc:Bounds x="2322" y="112" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Edge_SF_IH_1" bpmnElement="SF_IH_1">
-        <di:waypoint x="268" y="230"/>
-        <di:waypoint x="365" y="230"/>
+        <di:waypoint x="268" y="230" />
+        <di:waypoint x="380" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_4" bpmnElement="SF_IH_4">
-        <di:waypoint x="515" y="230"/>
-        <di:waypoint x="605" y="230"/>
+        <di:waypoint x="500" y="230" />
+        <di:waypoint x="605" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_5" bpmnElement="SF_IH_5">
-        <di:waypoint x="630" y="205"/>
-        <di:waypoint x="630" y="130"/>
-        <di:waypoint x="2075" y="130"/>
+        <di:waypoint x="630" y="205" />
+        <di:waypoint x="630" y="130" />
+        <di:waypoint x="2075" y="130" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_6" bpmnElement="SF_IH_6">
         <di:waypoint x="630" y="255"/>
@@ -212,21 +214,24 @@ WRITING IT IS NOT A PROCESS WRITE. `instance-readme` declares `layer: context`, 
         <di:waypoint x="985" y="230"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_14" bpmnElement="SF_IH_14">
-        <di:waypoint x="1010" y="205"/>
-        <di:waypoint x="1010" y="130"/>
-        <di:waypoint x="2075" y="130"/>
+        <di:waypoint x="1010" y="205" />
+        <di:waypoint x="1010" y="130" />
+        <di:waypoint x="2075" y="130" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1014" y="132" width="90" height="71" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_17" bpmnElement="SF_IH_17">
-        <di:waypoint x="1035" y="230"/>
-        <di:waypoint x="1080" y="230"/>
-        <di:waypoint x="1080" y="330"/>
-        <di:waypoint x="2150" y="330"/>
-        <di:waypoint x="2150" y="270"/>
+        <di:waypoint x="1035" y="230" />
+        <di:waypoint x="1080" y="230" />
+        <di:waypoint x="1080" y="330" />
+        <di:waypoint x="2150" y="330" />
+        <di:waypoint x="2150" y="270" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1084" y="244.5" width="90" height="71" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_15" bpmnElement="SF_IH_15">
         <di:waypoint x="1010" y="255"/>
         <di:waypoint x="1010" y="480"/>
         <di:waypoint x="1125" y="480"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="1014" y="358.5" width="90" height="18" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_7" bpmnElement="SF_IH_7">
         <di:waypoint x="1200" y="440"/>
@@ -234,35 +239,37 @@ WRITING IT IS NOT A PROCESS WRITE. `instance-readme` declares `layer: context`, 
         <di:waypoint x="1365" y="230"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_8" bpmnElement="SF_IH_8">
-        <di:waypoint x="1390" y="205"/>
-        <di:waypoint x="1390" y="130"/>
-        <di:waypoint x="2075" y="130"/>
+        <di:waypoint x="1390" y="205" />
+        <di:waypoint x="1390" y="130" />
+        <di:waypoint x="2075" y="130" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_9" bpmnElement="SF_IH_9">
-        <di:waypoint x="1415" y="230"/>
-        <di:waypoint x="1505" y="230"/>
+        <di:waypoint x="1415" y="230" />
+        <di:waypoint x="1520" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_10" bpmnElement="SF_IH_10">
-        <di:waypoint x="1655" y="230"/>
-        <di:waypoint x="1695" y="230"/>
+        <di:waypoint x="1640" y="230" />
+        <di:waypoint x="1710" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_11" bpmnElement="SF_IH_11">
-        <di:waypoint x="1845" y="230"/>
-        <di:waypoint x="1885" y="230"/>
+        <di:waypoint x="1830" y="230" />
+        <di:waypoint x="1900" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_16" bpmnElement="SF_IH_16">
-        <di:waypoint x="2035" y="230"/>
-        <di:waypoint x="2075" y="230"/>
+        <di:waypoint x="2020" y="230" />
+        <di:waypoint x="2090" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_18" bpmnElement="SF_IH_18">
-        <di:waypoint x="2225" y="230"/>
-        <di:waypoint x="2322" y="230"/>
+        <di:waypoint x="2210" y="230" />
+        <di:waypoint x="2322" y="230" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_SF_IH_12" bpmnElement="SF_IH_12">
-        <di:waypoint x="2225" y="130"/>
-        <di:waypoint x="2322" y="130"/>
+        <di:waypoint x="2225" y="130" />
+        <di:waypoint x="2322" y="130" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Shape_DSR_knowledge_graph" bpmnElement="DSR_knowledge_graph"><dc:Bounds x="985" y="620" width="50" height="50"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_DSR_knowledge_graph" bpmnElement="DSR_knowledge_graph"><dc:Bounds x="985" y="620" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1039" y="627" width="90" height="36" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Edge_DIA_A_ReadLocation" bpmnElement="DIA_A_ReadLocation"><di:waypoint x="1010" y="620"/><di:waypoint x="1010" y="595"/><di:waypoint x="820" y="595"/><di:waypoint x="820" y="520"/></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_DIA_A_ReadDeclaration" bpmnElement="DIA_A_ReadDeclaration"><di:waypoint x="1010" y="620"/><di:waypoint x="1010" y="595"/><di:waypoint x="1200" y="595"/><di:waypoint x="1200" y="520"/></bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
