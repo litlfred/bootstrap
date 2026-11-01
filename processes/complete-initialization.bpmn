@@ -45,9 +45,6 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
         <bpmn:flowNodeRef>GW_AllDone</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>End_Complete</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>End_OpenStepsRecorded</bpmn:flowNodeRef>
-      </bpmn:lane>
-      <bpmn:lane id="Lane_DataStore" name="Knowledge Graph Data Store" partitionElementRef="knowledge-graph-data-store">
-        <bpmn:documentation>The Knowledge Graph Data Store: the repository and its siblings, played by a mechanical Actor whose contract is to serve what is committed (skill knowledge-graph-data-store). The declarations are read here once, at the start, and the steps come from what they say rather than from anybody's memory of what a harness needs.</bpmn:documentation>
         <bpmn:flowNodeRef>A_ReadDeclarations</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
@@ -57,6 +54,11 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
     <bpmn:task id="A_ReadDeclarations" name="Read the declaration, and each one it needs">
       <bpmn:documentation>`&lt;name&gt;.json` at the root, then each name in its `needs`, from a sibling checkout `../&lt;name&gt;/&lt;name&gt;.json`. A dependency that is not beside it is itself a step, not done — never skipped.</bpmn:documentation>
       <bpmn:extensionElements><bootstrap.processes:skill ref="bootstrap-kg-navigation"/></bpmn:extensionElements>
+      <bpmn:property id="Property_A_ReadDeclarations_DSR_knowledge_graph" name="__targetRef_placeholder"/>
+      <bpmn:dataInputAssociation id="DIA_A_ReadDeclarations">
+        <bpmn:sourceRef>DSR_knowledge_graph</bpmn:sourceRef>
+        <bpmn:targetRef>Property_A_ReadDeclarations_DSR_knowledge_graph</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
     </bpmn:task>
 
     <bpmn:task id="A_CheckDocuments" name="Check the JSON Schemas and JSON-LD are at their IRIs">
@@ -141,6 +143,7 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
     <bpmn:sequenceFlow id="SF_CI_15" sourceRef="A_Report" targetRef="GW_AllDone"/>
     <bpmn:sequenceFlow id="SF_CI_16" name="yes" sourceRef="GW_AllDone" targetRef="End_Complete"/>
     <bpmn:sequenceFlow id="SF_CI_17" name="no" sourceRef="GW_AllDone" targetRef="End_OpenStepsRecorded"/>
+    <bpmn:dataStoreReference id="DSR_knowledge_graph" name="Knowledge graph" dataStoreRef="knowledge-graph"/>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="Diagram_Process_CompleteInitialization">
     <bpmndi:BPMNPlane id="Plane_Process_CompleteInitialization" bpmnElement="Collaboration_Process_CompleteInitialization">
@@ -148,10 +151,7 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
         <dc:Bounds x="140" y="80" width="2450" height="600"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Lane_BootstrappingAgent" bpmnElement="Lane_BootstrappingAgent" isHorizontal="true">
-        <dc:Bounds x="170" y="80" width="2420" height="400"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Shape_Lane_DataStore" bpmnElement="Lane_DataStore" isHorizontal="true">
-        <dc:Bounds x="170" y="480" width="2420" height="200"/>
+        <dc:Bounds x="170" y="80" width="2420" height="600"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Start_CompleteInitialization" bpmnElement="Start_CompleteInitialization">
         <dc:Bounds x="232" y="262" width="36" height="36"/>
@@ -300,6 +300,8 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
         <di:waypoint x="2240" y="350"/>
         <di:waypoint x="2412" y="350"/>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Shape_DSR_knowledge_graph" bpmnElement="DSR_knowledge_graph"><dc:Bounds x="415" y="720" width="50" height="50"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_DIA_A_ReadDeclarations" bpmnElement="DIA_A_ReadDeclarations"><di:waypoint x="440" y="720"/><di:waypoint x="440" y="620"/></bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
