@@ -99,7 +99,7 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
       <bpmn:extensionElements><bootstrap.processes:skill ref="initialization-steps"/></bpmn:extensionElements>
     </bpmn:task>
 
-    <bpmn:callActivity id="A_AskPerson" name="Ask the person to do what only they can" calledElement="Process_HumanAgentDiscussion">
+    <bpmn:callActivity id="A_AskPerson" name="Ask the person" calledElement="Process_HumanAgentDiscussion">
       <bpmn:documentation>A step the agent cannot do or cannot check from here — switching Pages on without a signed-in `gh`, granting a permission, choosing between two ways of fixing a declaration. Asked through the one reusable discussion, with the exact step written out so it can be followed without opening anything else. A person saying "done" is recorded as their word, not as a check; the next run checks it.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="human-agent-discussion"/>

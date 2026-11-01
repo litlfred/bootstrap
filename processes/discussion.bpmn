@@ -66,7 +66,7 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
       <bpmn:extensionElements><bootstrap.processes:skill ref="confirm-harness"/></bpmn:extensionElements>
     </bpmn:task>
 
-    <bpmn:callActivity id="A_AskRequestor" name="Ask the Requestor: which harness, and where?" calledElement="Process_HumanAgentDiscussion">
+    <bpmn:callActivity id="A_AskRequestor" name="Ask which harness, and where" calledElement="Process_HumanAgentDiscussion">
       <bpmn:documentation>The candidates go in as the options; the recommendation may name one; the default is NONE. What A_DetermineWhere established goes in too — the process, the two roles, the context — so the called discussion checks it rather than re-deriving it; and anything it could not establish goes in as undetermined, to be asked first. The Requestor's answer comes back as answered, or the question as still open.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="confirm-harness"/>
