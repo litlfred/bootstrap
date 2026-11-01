@@ -136,7 +136,7 @@ WRITING IT IS NOT A PROCESS WRITE. `instance-readme` declares `layer: context`, 
     <bpmn:sequenceFlow id="SF_IH_16" sourceRef="A_WriteRootReadme" targetRef="A_CompleteInitialization"/>
     <bpmn:sequenceFlow id="SF_IH_18" sourceRef="A_CompleteInitialization" targetRef="End_Installed"/>
     <bpmn:sequenceFlow id="SF_IH_12" sourceRef="A_LogFailure" targetRef="End_Failed"/>
-    <bpmn:dataStoreReference id="DSR_knowledge_graph" name="Knowledge graph" dataStoreRef="knowledge-graph"/>
+    <bpmn:dataStoreReference id="DSR_knowledge_graph" name="Knowledge graph" dataStoreRef="knowledge-graph-data-store"/>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="Diagram_Process_InitializeHarness">
     <bpmndi:BPMNPlane id="Plane_Process_InitializeHarness" bpmnElement="Collaboration_Process_InitializeHarness">

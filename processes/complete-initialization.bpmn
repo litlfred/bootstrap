@@ -143,7 +143,7 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
     <bpmn:sequenceFlow id="SF_CI_15" sourceRef="A_Report" targetRef="GW_AllDone"/>
     <bpmn:sequenceFlow id="SF_CI_16" name="yes" sourceRef="GW_AllDone" targetRef="End_Complete"/>
     <bpmn:sequenceFlow id="SF_CI_17" name="no" sourceRef="GW_AllDone" targetRef="End_OpenStepsRecorded"/>
-    <bpmn:dataStoreReference id="DSR_knowledge_graph" name="Knowledge graph" dataStoreRef="knowledge-graph"/>
+    <bpmn:dataStoreReference id="DSR_knowledge_graph" name="Knowledge graph" dataStoreRef="knowledge-graph-data-store"/>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="Diagram_Process_CompleteInitialization">
     <bpmndi:BPMNPlane id="Plane_Process_CompleteInitialization" bpmnElement="Collaboration_Process_CompleteInitialization">
