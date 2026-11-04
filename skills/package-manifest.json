@@ -10,7 +10,9 @@
     "discussion",
     "human-agent-discussion",
     "initialization-steps",
+    "knowledge-graph-data-store",
     "log-message",
+    "logger",
     "publish-documents",
     "publish-site",
     "root-readme"
