@@ -19,14 +19,14 @@
       "src": "AGENTS.md",
       "role": "agent-instructions",
       "title": "AGENTS.md — bootstrap",
-      "description": "Phase one of two. Valid with nothing installed: no skills, no knowledge graph, no MCP, no work-plan store. The default behaviour of initialisation is to copy this file, and the last bootstrap step re-enters through the installed harness, which is what supplies phase two. No `source` because this is the origin — an absent source means authored here, which is a different fact from an upstream that cannot be reached."
+      "description": "Phase one of two. Valid with nothing installed. Initialization copies this file; phase two is the installed harness's own instructions. It has no `source` because it is authored here."
     },
     {
       "id": "readme",
       "src": "README.md",
       "role": "instance-readme",
       "title": "bootstrap",
-      "description": "The flow, with every term linked to the schema that defines it. Self-documenting on GitHub: a person landing on the directory reads the thing itself rather than a pointer to a site."
+      "description": "The flow, with every term linked to the schema that defines it."
     },
     {
       "id": "vocabulary",
@@ -106,7 +106,7 @@
     {
       "id": "models",
       "path": "models/",
-      "description": "Which languages a model is good at, and whether anybody checked. In BOOTSTRAP for the reason everything else here is: an agent reaching for the language it should communicate in has not yet loaded the harness that would otherwise answer, so a registry one layer up would be unreachable in exactly the case it exists for. `context`: read when a session opens, never written by a process — a person grants a validation, an agent never does, because a model's own claim about its languages is the thing the validation state exists to distrust.",
+      "description": "Which languages a model is good at, and whether anybody checked. In bootstrap because an agent needs it before any harness is loaded. Read when a session opens, never written by a process: only a person grants a validation.",
       "graphTypologies": [
         "models"
       ]
