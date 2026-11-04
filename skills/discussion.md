@@ -1,3 +1,10 @@
+---
+name: discussion
+description: >
+  Settle which harness, and which repositories, when no file says: the output
+  is a document conforming to `discussion.output.schema.json`.
+---
+
 # discussion — settling what an agent cannot read off disk
 
 An agent that has just read bootstrap's `README.md` knows the shape of a
