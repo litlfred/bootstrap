@@ -4,9 +4,9 @@
 # 2026-10-15, D1): this layer's ns is a document, served at <iriBase>v<major>/ns,
 # so ns/ cannot also be a directory there. The reusable workflow reads the
 # path off the build, so nothing here spells it. Everything is decided in the
-# reusable workflow: it builds only this instance's context, writes that one
+# reusable workflow: it builds only this layer's context, writes that one
 # path to gh-pages (nothing else there is touched), creates gh-pages if absent,
-# and skips with a notice while the instance declares no iriBase.
+# and skips with a notice while the layer declares no iriBase.
 # GitHub Pages is switched on once, by hand: Settings -> Pages ->
 # "Deploy from a branch: gh-pages, / (root)".
 name: Publish JSON-LD context

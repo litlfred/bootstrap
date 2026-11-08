@@ -1,16 +1,16 @@
 ---
 name: publish-site
 description: >
-  Give an instance a site: its Knowledge Graph rendered for publication at
+  Give a layer a site: its Knowledge Graph rendered for publication at
   its site address, and the address answering. Four checks — a workflow
   publishes it, the gh-pages branch exists, Pages serves that branch, the
   address answers. How the rendering is staged and pushed is the toolset's
   own process, not this skill's.
 ---
 
-# The site: an instance rendered for publication, and its address answering
+# The site: a layer rendered for publication, and its address answering
 
-**One abstract step.** An instance with a `repository` is **rendered for
+**One abstract step.** A layer with a `repository` is **rendered for
 publication at its site address, and the address answers**. How the
 rendering is staged, committed and checked is the toolset's own subprocess
 (its render-to-GitHub-Pages skill and diagram), so this skill stays a list
@@ -21,7 +21,7 @@ goal.
 **Where the README page lands.** At `<site address>README.html`, and the site
 address itself (`index.html`) is the **landing page**: by default a plain
 redirect to `README.html`, so a Harness that wants a different front page puts
-its own `index.html` or `index.md` at its root and changes nothing else. A page generated from the instance's files says so at its top,
+its own `index.html` or `index.md` at its root and changes nothing else. A page generated from the layer's files says so at its top,
 and its footer points to what it was generated from, never to an editor for
 the published copy: that copy is replaced on every publish.
 
@@ -32,7 +32,7 @@ otherwise `https://<owner>.github.io/<repo>/`.
 
 | step | done when |
 |---|---|
-| `site:workflow` | a workflow commits the rendering onto `gh-pages`: one under the instance's own `.github/workflows/`, or one in the toolset that publishes it from outside. bootstrap's own workflow writes only its JSON-LD context to `gh-pages`; its site is published from outside |
+| `site:workflow` | a workflow commits the rendering onto `gh-pages`: one under the layer's own `.github/workflows/`, or one in the toolset that publishes it from outside. bootstrap's own workflow writes only its JSON-LD context to `gh-pages`; its site is published from outside |
 | `site:branch` | a `gh-pages` branch exists. **It must exist before Pages can be switched on**; where it does not, the step says how to create it (an orphan branch with a placeholder page) |
 | `site:enabled` | Pages is on, serving `gh-pages` at `/`. Switched on only by an authenticated forge CLI once the branch exists; otherwise the person gets the one step below |
 | `site:live` | the address answers 200, and so does its README page, `README.html`. 404 after Pages is on usually means the workflow has not run yet. A 403, 407, 5xx or no answer is about the way from here: *could not determine*, never done |
