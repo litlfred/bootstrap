@@ -14,9 +14,9 @@
     <bpmn:participant id="Participant_Process_CompleteInitialization" name="Complete initialization" processRef="Process_CompleteInitialization"/>
   </bpmn:collaboration>
   <bpmn:process id="Process_CompleteInitialization" name="Complete initialization" isExecutable="false">
-    <bpmn:documentation>A SUB-PROCESS of initialize-harness, called after a harness is installed and also when the location turns out to be an instance of the chosen harness already. It is how an agent — the one that installed the harness, or one dispatched for exactly this with nothing but this diagram and the declaration — makes sure EVERY initialization step is done.
+    <bpmn:documentation>A SUB-PROCESS of initialize-harness, called after a harness is installed and also when the location turns out to be a layer instantiating the chosen harness already. It is how an agent — the one that installed the harness, or one dispatched for exactly this with nothing but this diagram and the declaration — makes sure EVERY initialization step is done.
 
-THE STEPS ARE NOT LISTED HERE. They are named by the declarations: the instance's `&lt;name&gt;.json` and every declaration it `needs`, read from the sibling checkouts. A declared directory is a step (it exists); a declared asset is a step (the file is there); a dependency's `&lt;name&gt;/docs/bootstrap/initialization.md` is a step (it was followed); the root README and the sections it opts into are steps; the `repository` a declaration names makes the site steps — a Pages workflow, a `gh-pages` branch, Pages switched on, the address answering. A harness above bootstrap names more in the same way — a work-plan store it declares as a directory is a directory step — and bootstrap does not need to know which. The skill `initialization-steps` has the table.
+THE STEPS ARE NOT LISTED HERE. They are named by the declarations: the layer's `&lt;name&gt;.json` and every declaration it `needs`, read from the sibling checkouts. A declared directory is a step (it exists); a declared asset is a step (the file is there); a dependency's `&lt;name&gt;/docs/bootstrap/initialization.md` is a step (it was followed); the root README and the sections it opts into are steps; the `repository` a declaration names makes the site steps — a Pages workflow, a `gh-pages` branch, Pages switched on, the address answering. A harness above bootstrap names more in the same way — a work-plan store it declares as a directory is a directory step — and bootstrap does not need to know which. The skill `initialization-steps` has the table.
 
 IDEMPOTENT BY CONSTRUCTION. Every step is CHECKED before anything is done, and a done step is left alone, so running this twice changes nothing the second time. Nothing is replaced: a step that would overwrite what somebody wrote is a step for a person, not for the agent.
 
@@ -121,7 +121,7 @@ NO work-plan element on any activity, and isExecutable is false, for the reasons
 
     <bpmn:endEvent id="End_Complete" name="Every step done"/>
     <bpmn:endEvent id="End_OpenStepsRecorded" name="Open steps recorded, each with what to do">
-      <bpmn:documentation>Not a failure of the harness: the repository is an instance, and the report says what is left and who does it. Running this process again resumes from the checks, because a done step is left alone.</bpmn:documentation>
+      <bpmn:documentation>Not a failure of the harness: the repository is a layer, and the report says what is left and who does it. Running this process again resumes from the checks, because a done step is left alone.</bpmn:documentation>
     </bpmn:endEvent>
 
     <bpmn:sequenceFlow id="SF_CI_1" sourceRef="Start_CompleteInitialization" targetRef="A_ReadDeclarations"/>
