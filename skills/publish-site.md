@@ -34,8 +34,19 @@ otherwise `https://<owner>.github.io/<repo>/`.
 |---|---|
 | `site:workflow` | a workflow commits the rendering onto `gh-pages`: one under the layer's own `.github/workflows/`, or one in the toolset that publishes it from outside. bootstrap's own workflow writes only its JSON-LD context to `gh-pages`; its site is published from outside |
 | `site:branch` | a `gh-pages` branch exists. **It must exist before Pages can be switched on**; where it does not, the step says how to create it (an orphan branch with a placeholder page) |
-| `site:enabled` | Pages is on, serving `gh-pages` at `/`. Switched on only by an authenticated forge CLI once the branch exists; otherwise the person gets the one step below |
+| `site:enabled` | Pages is on, serving `gh-pages` at `/`. Only after `site:branch` passes for this repository (see **Order** below). Switched on only by an authenticated forge CLI once the branch exists; otherwise the person gets the one step below |
 | `site:live` | the address answers 200, and so does its README page, `README.html`. 404 after Pages is on usually means the workflow has not run yet. A 403, 407, 5xx or no answer is about the way from here: *could not determine*, never done |
+
+**Order: create `gh-pages`, then switch Pages on. Never the reverse.**
+`site:enabled` is not attempted, and not asked of a person, until
+`site:branch` has passed for that repository, checked at the moment of
+asking (a read of the branch, not a remembered publish run). A first publish
+that is still running, or that failed, has not created the branch. When
+several repositories are set up together, the ask lists only those whose
+`gh-pages` exists now; the others are asked later, once their branch exists,
+and never ahead of it "for when it appears". Owner, 2026-11-10: "you need
+to create gh-pages first ... create gh-pages THEN update settings. you make
+this mistake a lot."
 
 When `site:enabled` cannot be done here, it goes to the person through
 [`human-agent-discussion`](human-agent-discussion.md), written so it can be
