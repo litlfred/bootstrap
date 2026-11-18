@@ -553,33 +553,33 @@
 <h1>bootstrap vocabulary</h1>
 <p>Namespace <code>https://litlfred.github.io/bootstrap/v0/ns/</code>. Machine-readable: <a href="index.jsonld">index.jsonld</a>.</p>
 <ul>
-<li><code>bootstrap:Node</code> Node — One file, or one part of a file addressable by an IRI fragment, named by an IRI.</li>
-<li><code>bootstrap:Reference</code> Reference — A Node's naming of another Node by its IRI.</li>
-<li><code>bootstrap:NodeSchema</code> Node Schema — A schema a Node can be checked against: a JSON Schema, or a published external schema such as BPMN's.</li>
-<li><code>bootstrap:NodeKind</code> Node Kind — A name paired with a Node Schema.</li>
-<li><code>bootstrap:Subkind</code> Subkind — A Node Kind whose Node Schema requires everything another Node Kind's does, so every Node that satisfies it satisfies the other too.</li>
-<li><code>bootstrap:NodeInstance</code> Node Instance — A Node that names its Node Kind, in `$schema` or front matter, and satisfies that kind's Node Schema.</li>
-<li><code>bootstrap:GraphTypology</code> Graph Typology — A named set of Node Kinds.</li>
-<li><code>bootstrap:Declaration</code> Declaration — A JSON document, `&lt;name&gt;.json`, that gives a name and lists directory entries and file entries.</li>
-<li><code>bootstrap:Extension</code> Extension — A field of a Declaration, or of one of its entries, that is not defined here. A reader that does not recognise the field ignores it, and the rest of the Declaration keeps its meaning.</li>
-<li><code>bootstrap:Subgraph</code> Subgraph — A directory entry of a Declaration: an id, a directory, and the Graph Typologies its Node Instances' kinds belong to.</li>
-<li><code>bootstrap:Asset</code> Asset — A file entry of a Declaration: one file about the repository itself, whose `role` field says what it is for.</li>
-<li><code>bootstrap:KnowledgeGraph</code> Knowledge Graph — The Node Schemas, Node Instances and Assets one Declaration lists, as of one version of the repository. Published as JSON-LD, the statements of each Subgraph's Node Instances form one named graph.</li>
-<li><code>bootstrap:Dependency</code> Dependency — A Declaration's `needs` entry naming another Knowledge Graph. References may point from this graph's Node Instances into the named one, never back.</li>
-<li><code>bootstrap:Content</code> Content — Node Instances that describe the subject matter of a Knowledge Graph, such as records, documents, catalogues and their terms, rather than how to work with it.</li>
-<li><code>bootstrap:Task</code> Task — A unit of work, stated by what it needs to begin and what it produces.</li>
-<li><code>bootstrap:Actor</code> Actor — A person, an agent or a program that can carry out Tasks.</li>
-<li><code>bootstrap:Skill</code> Skill — A Node Instance stating a responsibility an Actor carries out to complete a Task: as natural-language instructions to follow, as a contract to be tested against, or both.</li>
-<li><code>bootstrap:Role</code> Role — A Node Instance naming a part an Actor takes on to carry out Tasks, and listing the Skills that part needs.</li>
-<li><code>bootstrap:ProcessNode</code> Process Node — A BPMN flow node: an activity (a task or call activity), a gateway, or an event.</li>
-<li><code>bootstrap:SequenceFlow</code> Sequence Flow — A directed connection in a BPMN process from one Process Node to the next.</li>
-<li><code>bootstrap:Process</code> Process — A Node Instance holding a BPMN process that coordinates Tasks: its Process Nodes, joined by Sequence Flows, sit in lanes that each name a Role.</li>
-<li><code>bootstrap:Harness</code> Harness — A Knowledge Graph whose Subgraphs hold Skills, Roles or Processes: what an Actor uses to work with a Knowledge Graph, including itself.</li>
-<li><code>bootstrap:graphTypology/skills</code> skills — A Subgraph of Skills: the instructions an Actor follows to carry out a Task.</li>
-<li><code>bootstrap:graphTypology/schemas</code> schemas — A Subgraph of Node Schemas: files that state the shape other files must have.</li>
-<li><code>bootstrap:graphTypology/scenarios</code> scenarios — A Subgraph of Roles: the responsibilities an Actor takes on, and who takes them on.</li>
-<li><code>bootstrap:graphTypology/processes</code> processes — A Subgraph of Processes: BPMN diagrams that coordinate Tasks, and the decision tables their gateways compute from.</li>
-<li><code>bootstrap:graphTypology/models</code> models — A Subgraph describing the language models an Actor may be: which languages each is good at, and whether a person checked.</li>
+<li id="Node"><a href="Node/"><code>bootstrap:Node</code></a> Node — One file, or one part of a file addressable by an IRI fragment, named by an IRI.</li>
+<li id="Reference"><a href="Reference/"><code>bootstrap:Reference</code></a> Reference — A Node's naming of another Node by its IRI.</li>
+<li id="NodeSchema"><a href="NodeSchema/"><code>bootstrap:NodeSchema</code></a> Node Schema — A schema a Node can be checked against: a JSON Schema, or a published external schema such as BPMN's.</li>
+<li id="NodeKind"><a href="NodeKind/"><code>bootstrap:NodeKind</code></a> Node Kind — A name paired with a Node Schema.</li>
+<li id="Subkind"><a href="Subkind/"><code>bootstrap:Subkind</code></a> Subkind — A Node Kind whose Node Schema requires everything another Node Kind's does, so every Node that satisfies it satisfies the other too.</li>
+<li id="NodeInstance"><a href="NodeInstance/"><code>bootstrap:NodeInstance</code></a> Node Instance — A Node that names its Node Kind, in `$schema` or front matter, and satisfies that kind's Node Schema.</li>
+<li id="GraphTypology"><a href="GraphTypology/"><code>bootstrap:GraphTypology</code></a> Graph Typology — A named set of Node Kinds.</li>
+<li id="Declaration"><a href="Declaration/"><code>bootstrap:Declaration</code></a> Declaration — A JSON document, `&lt;name&gt;.json`, that gives a name and lists directory entries and file entries.</li>
+<li id="Extension"><a href="Extension/"><code>bootstrap:Extension</code></a> Extension — A field of a Declaration, or of one of its entries, that is not defined here. A reader that does not recognise the field ignores it, and the rest of the Declaration keeps its meaning.</li>
+<li id="Subgraph"><a href="Subgraph/"><code>bootstrap:Subgraph</code></a> Subgraph — A directory entry of a Declaration: an id, a directory, and the Graph Typologies its Node Instances' kinds belong to.</li>
+<li id="Asset"><a href="Asset/"><code>bootstrap:Asset</code></a> Asset — A file entry of a Declaration: one file about the repository itself, whose `role` field says what it is for.</li>
+<li id="KnowledgeGraph"><a href="KnowledgeGraph/"><code>bootstrap:KnowledgeGraph</code></a> Knowledge Graph — The Node Schemas, Node Instances and Assets one Declaration lists, as of one version of the repository. Published as JSON-LD, the statements of each Subgraph's Node Instances form one named graph.</li>
+<li id="Dependency"><a href="Dependency/"><code>bootstrap:Dependency</code></a> Dependency — A Declaration's `needs` entry naming another Knowledge Graph. References may point from this graph's Node Instances into the named one, never back.</li>
+<li id="Content"><a href="Content/"><code>bootstrap:Content</code></a> Content — Node Instances that describe the subject matter of a Knowledge Graph, such as records, documents, catalogues and their terms, rather than how to work with it.</li>
+<li id="Task"><a href="Task/"><code>bootstrap:Task</code></a> Task — A unit of work, stated by what it needs to begin and what it produces.</li>
+<li id="Actor"><a href="Actor/"><code>bootstrap:Actor</code></a> Actor — A person, an agent or a program that can carry out Tasks.</li>
+<li id="Skill"><a href="Skill/"><code>bootstrap:Skill</code></a> Skill — A Node Instance stating a responsibility an Actor carries out to complete a Task: as natural-language instructions to follow, as a contract to be tested against, or both.</li>
+<li id="Role"><a href="Role/"><code>bootstrap:Role</code></a> Role — A Node Instance naming a part an Actor takes on to carry out Tasks, and listing the Skills that part needs.</li>
+<li id="ProcessNode"><a href="ProcessNode/"><code>bootstrap:ProcessNode</code></a> Process Node — A BPMN flow node: an activity (a task or call activity), a gateway, or an event.</li>
+<li id="SequenceFlow"><a href="SequenceFlow/"><code>bootstrap:SequenceFlow</code></a> Sequence Flow — A directed connection in a BPMN process from one Process Node to the next.</li>
+<li id="Process"><a href="Process/"><code>bootstrap:Process</code></a> Process — A Node Instance holding a BPMN process that coordinates Tasks: its Process Nodes, joined by Sequence Flows, sit in lanes that each name a Role.</li>
+<li id="Harness"><a href="Harness/"><code>bootstrap:Harness</code></a> Harness — A Knowledge Graph whose Subgraphs hold Skills, Roles or Processes: what an Actor uses to work with a Knowledge Graph, including itself.</li>
+<li id="graphTypology/skills"><a href="graphTypology/skills/"><code>bootstrap:graphTypology/skills</code></a> skills — A Subgraph of Skills: the instructions an Actor follows to carry out a Task.</li>
+<li id="graphTypology/schemas"><a href="graphTypology/schemas/"><code>bootstrap:graphTypology/schemas</code></a> schemas — A Subgraph of Node Schemas: files that state the shape other files must have.</li>
+<li id="graphTypology/scenarios"><a href="graphTypology/scenarios/"><code>bootstrap:graphTypology/scenarios</code></a> scenarios — A Subgraph of Roles: the responsibilities an Actor takes on, and who takes them on.</li>
+<li id="graphTypology/processes"><a href="graphTypology/processes/"><code>bootstrap:graphTypology/processes</code></a> processes — A Subgraph of Processes: BPMN diagrams that coordinate Tasks, and the decision tables their gateways compute from.</li>
+<li id="graphTypology/models"><a href="graphTypology/models/"><code>bootstrap:graphTypology/models</code></a> models — A Subgraph describing the language models an Actor may be: which languages each is good at, and whether a person checked.</li>
 </ul>
 </body>
 </html>
